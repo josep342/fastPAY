@@ -1,0 +1,5634 @@
+<ion-content [fullscreen]="true">
+
+  <div class="pageServer" id="pageServer">
+
+
+    <div class="servcadre0">
+
+      <div class="MenuHAut">
+
+        <img src="assets/images/logoPharma.jpeg" class="logo">
+
+      </div>
+
+      <div class="servcadre00">
+
+        <ion-button class="servbt1" (click)="changerModeConnexion()">
+          {{textBtn}}
+        </ion-button>
+        <br>
+
+      </div>
+
+      <div class="servcadre1" id="cadre1">
+
+        <br>
+
+        <div class="servdivAdr">
+
+          <input type="text" placeholder="Ex:@127w@5w1@75w@5" [(ngModel)]="serverAdr">
+
+        </div>
+
+         <div class="servdivAdr" *ngIf="maskAll==true">
+
+          <input type="text" placeholder="Ex:Pharmacie GOLD-KIN" [(ngModel)]="nomPharma">
+
+        </div>
+
+        <div  class="cadreBasSecours" (click)="openAuthSecours()" *ngIf="maskAll==true">
+
+          <ion-icon slot="icon-only" name="save" class="iconRapbas"></ion-icon>
+
+        </div>
+
+          <span class="textpanSec" (click)="openAuthSecours()" *ngIf="maskAll==true">Secours Mode</span>
+
+      </div>
+
+      <div class="servcadre2" id="cadre2">
+
+        <img src="">
+
+      </div>
+
+      <br><br>
+
+      <ion-item *ngIf="maskAll==true">
+
+          <p class="titreMenu">Appareil  </p>
+
+        <ion-select class="textSelectMedia" [(ngModel)]="mediaScreen">
+          <ion-select-option class="textJourna" *ngFor="let element of tabMedia" [value]="element">
+           {{element}}
+          </ion-select-option>
+        </ion-select>
+
+
+      </ion-item>
+
+
+
+      <div class="servcadre3" id="cadre3">
+
+        <ion-button class="servbt2" (click)="pingServer()">
+          Ping Server
+        </ion-button>
+
+        <!--(click)="testerServer()" -->
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="divConn" id="divConSecours">
+
+    <div class="cadreSousv">
+
+      <br>
+
+      <p class="contitre">Explox243 SECOURS </p>
+
+      <div class="MenuHAutConne">
+
+        <span class="conlabel">[TRAVAILLEUR] => [ {{nomPharma }} ]</span><br>
+
+        <img src="assets/images/logoPharma.jpeg" class="logo">
+
+      </div>
+
+      <bR><BR>
+
+      <div class="condiv2">
+
+        <div class="condivSous1">
+          <br>
+          <span class="conlabel">ID</span>
+
+        </div>
+
+        <div class="condivSous2">
+
+          <input type="text" placeholder="ID Travailleur" [(ngModel)]="id">
+
+        </div>
+
+      </div>
+
+      <div class="condiv2">
+
+        <div class="condivSous1">
+          <br>
+          <span class="conlabel">PWD</span>
+
+        </div>
+
+        <div class="condivSous2">
+
+          <input type="text" placeholder="Mot de passe" [(ngModel)]="pwd">
+
+        </div>
+
+      </div>
+
+        <ion-button class="conbtconnexion" (click)="authentificationLocal()">
+          Connexion
+        </ion-button>
+
+        <br>
+
+    </div>
+
+    <a href='http://chambretechniqueinfo.com' class="conlienCTI">www.chambretechniqueinfo.com</a> <br>
+
+    <a href="http://chambretechniqueinfo.com" class="conlienCTI">&copy; Tout Droit Reservé</a>
+
+
+  </div>
+
+
+  <div class="divConn" id="divConn">
+
+    <div class="cadreSousv">
+
+      <br>
+
+      <p class="contitre">Explox243  </p>
+
+      <div class="MenuHAutConne">
+
+        <span class="conlabel">[TRAVAILLEUR] => [ {{nomPharma }} ]</span><br>
+
+        <img src="assets/images/logoPharma.jpeg" class="logo">
+
+      </div>
+
+      <bR><BR>
+
+      <div class="condiv2">
+
+        <div class="condivSous1">
+          <br>
+          <span class="conlabel">ID</span>
+
+        </div>
+
+        <div class="condivSous2">
+
+          <input type="text" placeholder="ID Travailleur" [(ngModel)]="id">
+
+        </div>
+
+      </div>
+
+      <div class="condiv2">
+
+        <div class="condivSous1">
+          <br>
+          <span class="conlabel">PWD</span>
+
+        </div>
+
+        <div class="condivSous2">
+
+          <input type="text" placeholder="Mot de passe" [(ngModel)]="pwd">
+
+        </div>
+
+      </div>
+
+        <ion-button class="conbtconnexion" (click)="authentfication()">
+          Connexion
+        </ion-button>
+
+        <br>
+
+    </div>
+
+    <a href='http://chambretechniqueinfo.com' class="conlienCTI">www.chambretechniqueinfo.com</a> <br>
+
+    <a href="http://chambretechniqueinfo.com" class="conlienCTI">&copy; Tout Droit Reservé</a>
+
+
+  </div>
+
+
+<div class="divApp" id="divApp">
+
+<div class="menu0" id="menu0">
+  <div class="menu1" id='menu1'>
+
+    <p class="titre1Menu">Explox243 </p>
+
+  </div>
+  <div class="menu2" id="menu2">
+
+    <ion-button (click)="tirerMenu()" class="btnAction">
+      <ion-icon slot="icon-only" name="menu" class="iconAction"> </ion-icon>
+    </ion-button>
+    <br>
+
+  </div>
+
+  <div class="menu3" id="menu3">
+
+    <div class="MenuHAut">
+
+      <img src="assets/images/logoPharma.jpeg" class="logo">
+
+    </div>
+
+          <ion-item>
+
+            <ion-button class="btnMenue">
+
+              <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+            </ion-button>
+
+            <ion-button (click)="chargePageVente()">
+
+              <p class="titreMenu">Vente {{modeLabel}}  </p>
+
+            </ion-button>
+
+
+          </ion-item>
+
+
+          <ion-item>
+            <ion-button class="btnMenue">
+
+              <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+            </ion-button>
+
+
+            <ion-button (click)="chargePageJournal()">
+
+              <p class="titreMenu">Journal</p>
+
+            </ion-button>
+          </ion-item>
+
+          <ion-item>
+
+            <ion-button class="btnMenue">
+
+              <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+            </ion-button>
+
+            <ion-button (click)="chargePageMode()">
+
+              <p class="titreMenu">Mode Expert</p>
+
+
+            </ion-button>
+
+          </ion-item>
+
+          <ion-item>
+
+            <ion-button class="btnMenue">
+
+              <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+            </ion-button>
+
+            <ion-button (click)="chargePageSetting()">
+
+              <p class="titreMenu">Parametres</p>
+
+
+            </ion-button>
+
+          </ion-item>
+
+          <ion-accordion-group expand="true">
+
+            <ion-accordion value="Premier" expand="true">
+
+              <ion-item slot="header">
+
+                <ion-button class="btnMenue">
+
+                  <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+                </ion-button>
+
+                <p class="titreMenu">Aide ?</p>
+
+              </ion-item>
+
+              <div slot="content">
+
+                <ul>
+                  <li>
+                    <ion-icon slot="icon-only" name="hand-right-outline"> </ion-icon>
+                    <a href="http://chambretechniqueinfo.com"  class="lienCache">Contactez le Support</a>
+                  </li>
+                  <li>
+                    <ion-icon slot="icon-only" name="hand-right-outline"> </ion-icon>
+                    <a href="http://chambretechniqueinfo.com" class="lienCache">Academie Logiciel </a>
+                  </li>
+                  <li>
+                    <ion-icon slot="logo-whatsapp" name="hand-right-outline"> </ion-icon>
+                    <a  class="lienCache">+243 970494397</a>
+                  </li>
+
+                  <li *ngFor="let element of tabPublicite">
+                    <ion-icon slot="logo-whatsapp" name="hand-right-outline"> </ion-icon>
+                    <a [href]="element.lien" class="lienCache"> {{element.titre}} </a>
+                  </li>
+
+                </ul>
+              </div>
+
+            </ion-accordion>
+
+          </ion-accordion-group>
+
+
+      <div class="MenuBAs">
+
+        <ion-button class="btnMenuBas">
+
+          <ion-icon slot="icon-only" name="logo-facebook" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <ion-button class="btnMenuBas">
+
+          <ion-icon slot="icon-only" name="logo-amazon" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <ion-button class="btnMenuBas" >
+
+          <ion-icon slot="icon-only" name="logo-wordpress" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+      </div>
+
+  </div>
+
+</div>
+
+
+
+<div class="divContent">
+
+  <div class="pageAccueilStynth" id="pageSyntheseAcceuil">
+
+
+      <p class="titre2"> FilBack </p>
+
+        <div class="cadreCouvrFilBack">
+
+          <div class="cadreHautAccueilSynth">
+
+            <div class="cadreHautRapportAccuel">
+
+              <fieldset class="grouperAll">
+                <legend>Session </legend>
+
+                <div  class="cadreHautIconSynthese">
+
+                    <ion-icon slot="icon-only" name="person" class="btnsettingBas"></ion-icon>
+
+                </div>
+
+                <div  class="cadreHautIconSyntheseB_Bas">
+
+                  <p class="titreSynthAccueil"> [ NOM :] {{ identite.nom }} {{ identite.prenom }}  [ SEXE :] {{ identite.sexe }}  </p>
+
+                </div>
+
+                <div  class="cadreHautIconSynthese">
+
+                  <ion-icon slot="icon-only" name="timer" class="btnsettingBas"></ion-icon>
+
+              </div>
+
+              <div  class="cadreHautIconSyntheseB_Bas">
+
+                <p class="titreSynthAccueil"> [Ouverture :] {{heureServeur}} </p>
+
+              </div>
+
+              </fieldset>
+
+              <br><bR>
+
+            </div>
+          </div>
+
+        <div class="cadreHautAccueilSynth">
+
+          <div class="cadreHautRapportAccuel">
+
+            <fieldset class="grouperAll">
+              <legend>Ventes Cash</legend>
+
+              <div  class="cadreHautIconSyntheseB_Bas">
+
+                <p class="titreSynthAccueil"> Cash</p>
+
+              </div>
+
+              <div  class="cadreHautIconSynthese">
+
+                <ion-icon slot="icon-only" name="logo-euro" class="btnsettingBas"></ion-icon>
+
+              </div>
+
+
+              <div class="cadreSepaVenteAccueil">
+
+                <div class="cadreIconD">
+
+                  <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+                </div>
+
+                <div class="cadreContD">
+
+                  {{tabCachAccueil.taillSimle}}
+
+                </div>
+
+                <div class="cadreIconD">
+
+                  <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+                </div>
+
+                <div class="cadreContD">
+
+                  {{tabCachAccueil.totSimle}}
+
+                </div>
+
+              </div>
+
+              <br><br>
+
+            </fieldset>
+
+            <br><bR>
+
+          </div>
+
+        </div>
+
+        <div class="cadreHautAccueilSynth">
+
+          <div class="cadreHautRapportAccuel">
+
+            <fieldset class="grouperAll">
+              <legend>Ventes Abonnés(es)</legend>
+
+              <div  class="cadreHautIconSyntheseB_Bas">
+
+                <p class="titreSynthAccueil"> Credit  </p>
+
+              </div>
+
+              <div  class="cadreHautIconSynthese">
+
+                <ion-icon slot="icon-only" name="calendar" class="btnsettingBas"></ion-icon>
+
+              </div>
+
+
+              <div class="cadreSepaVenteAccueil">
+
+                <div class="cadreIconD">
+
+                  <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+                </div>
+
+                <div class="cadreContD">
+
+                  {{tabCreditAccueil.taillAB}}
+
+                </div>
+
+                <div class="cadreIconD">
+
+                  <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+                </div>
+
+                <div class="cadreContD">
+
+                  {{tabCreditAccueil.totAB}}
+
+                </div>
+
+              </div>
+
+              <br><br>
+
+
+            </fieldset>
+
+            <br><bR>
+
+          </div>
+
+        </div>
+
+        <div class="cadreHautAccueilSynth">
+
+          <div class="cadreHautRapportAccuel">
+
+            <fieldset class="grouperAll">
+              <legend>Depenses & Charges</legend>
+
+              <div  class="cadreHautIconSyntheseB_Bas">
+
+                <p class="titreSynthAccueil"> Cash   </p>
+
+              </div>
+
+              <div  class="cadreHautIconSynthese">
+
+                <ion-icon slot="icon-only" name="trail-sign" class="btnsettingBas"></ion-icon>
+
+              </div>
+
+
+              <div class="cadreSepaVenteAccueil">
+
+                <div class="cadreIconD">
+
+                  <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+                </div>
+
+                <div class="cadreContD">
+
+                  {{tabMotifAccueil.taillMotif}}
+
+                </div>
+
+                <div class="cadreIconD">
+
+                  <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+                </div>
+
+                <div class="cadreContD">
+
+                  {{tabMotifAccueil.totMotif}}
+
+                </div>
+
+              </div>
+
+              <br><br>
+
+
+            </fieldset>
+
+            <br><bR>
+
+          </div>
+
+        </div>
+
+
+        <div class="cadreHautAccueilSynth">
+
+          <div class="cadreHautRapportAccuel">
+
+            <fieldset class="grouperAll">
+              <legend>Communiqués </legend>
+
+              <div  class="cadreHautIconSyntheseB_Bas">
+
+                <p class="titreSynthAccueil"> New's </p>
+
+              </div>
+
+              <div  class="cadreHautIconSynthese">
+
+                <ion-icon slot="icon-only" name="hand-right" class="btnsettingBas"></ion-icon>
+
+              </div>
+
+              <br><br>
+
+
+            </fieldset>
+
+            <br><bR>
+
+          </div>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="http://chambretechniqueinfo.com" class="lienCache"> {{repdataAJoutCreate | json}} </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+
+  </div>
+
+
+  <div class="pageVente" id="pageVente">
+
+    <div class="cadre" id="cadre">
+
+      <div class="divRecherche">
+        <div class="divRech1">
+
+          <input type="text" class="trechProd" placeholder="Recherche" [(ngModel)]="prefixProdui">
+
+        </div>
+
+        <div class="divRech2">
+
+          <ion-select (click)="selectLike()" (ionChange)="rechercheProdui()" [(ngModel)]="nomProduit">
+
+            <ion-select-option *ngFor ="let titre of listProduiLike;let i=index" class="textselect" [value]="titre.matricule">
+
+              {{titre.nom}}
+
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+        <!-- <ion-spinner name="crescent">Chosir</ion-spinner>--!-->
+
+      </div>
+
+      <div class="divCotRech">
+
+        <ion-button class="btnModele" (click)="tireCoupon()">
+
+          <ion-icon slot="icon-only" name="cart-outline" class="icon"> </ion-icon>
+          <span class="textautre">+ {{ taillCoupon }} </span>
+        </ion-button>
+
+      </div>
+
+
+      <div class="divcadre">
+        <div class="div1">
+
+          <div class="divSous1">
+            <span>Nom  </span>
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte" [(ngModel)]="nomProd"> {{affichNom}} </span>
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+            <span>Prix</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte" [(ngModel)]="puProd"> {{affichPu}} </span>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="divcadre"  *ngIf="modeVente==false">
+        <div class="div1">
+
+          <div class="divSous1">
+
+            <span>duree</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichduree}} </span>
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+
+            <span>Tranche</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichTranche}} </span>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="divcadre"  *ngIf="modeVente">
+        <div class="div1">
+
+          <div class="divSous1">
+
+            <span>Exp..</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichExp}} </span>
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+
+            <span>Descr.</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichCat}} </span>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="divcadre" *ngIf="modeVente">
+        <div class="div1">
+          <div class="divSous1">
+
+            <span>Info</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichTraite}} </span>
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+
+            <span>Descr.</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichAnti}} </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="divcadre" *ngIf="modeVente">
+        <div class="div1">
+
+          <div class="divSous1">
+
+            <span>Info</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichPos}} </span>
+          </div>
+
+        </div>
+        <div class="div2">
+          <div class="divSous1">
+
+            <span>Descr.</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichAge}} </span>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="msgBox" id="msgBoxProfo">
+
+      <ion-button (click)="changeModeProforma()" class="btnMidPriseCharge">
+
+        <ion-icon slot="icon-only" name="book-outline" class="iconbas"></ion-icon>
+
+      </ion-button>
+
+      <ion-button (click)="impressioMode()" class="btnMidPriseChargeImprio" id="btnMidPriseChargeImprio">
+
+        <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+      </ion-button>
+
+      <ion-button (click)="proformaCouponAnnuler()" class="btnMidQuitter">
+
+        <ion-icon slot="icon-only" name="close-outline" class="iconbas"></ion-icon>
+
+      </ion-button>
+
+      <bR>
+
+      <div class="divMidClient1" id="divMidClient1">
+
+        <input type="text" placeholder="Nom du client" class="textRechClientAbonn" [(ngModel)]="nomClientProforma">
+
+      </div>
+
+      <div class="divMidClient2" id="divMidClient2">
+
+        <div class="divMidClient2A">
+
+          <input type="text" placeholder="Recherche Profo.." class="textRechClientAbonn" [(ngModel)]="prefixClientProforma">
+
+        </div>
+        <div class="divMidClient2B">
+
+          <ion-select [(ngModel)]="ClientProforma" class="textRechClientAbonn" (click)="chargerProforma()" (ionChange)="afficheProforma()">
+            <ion-select-option class="textJourna" *ngFor="let element of tabClientCharger" [value]="element.nom_client">
+             {{element.nom_client}}
+            </ion-select-option>
+          </ion-select>
+
+        </div>
+
+      </div>
+
+      <bR>
+
+      <ion-button class="btnMid" (click)="proformaCouponAnnuler()" id="btnPref1">
+        Annuler
+      </ion-button>
+
+      <ion-button class="btnMid" (click)="saveProforma()" id="btnPref2">
+        Enregistrer
+      </ion-button>
+
+    </div>
+
+    <div class="msgBox" id="msgBox">
+
+      <ion-button (click)="changeModeClient()" class="btnMidPriseCharge">
+
+        <ion-icon slot="icon-only" name="receipt-outline" class="iconbas"></ion-icon>
+
+      </ion-button>
+
+      <ion-button (click)="confirmerCouponAnnuler()" class="btnMidQuitter">
+
+        <ion-icon slot="icon-only" name="close-outline" class="iconbas"></ion-icon>
+
+      </ion-button>
+
+      <bR>
+
+      <div class="divMidClient1" id="divMidClient1Val">
+
+        <input type="text" placeholder="Nom du client" class="textRechClientAbonn" [(ngModel)]="nomClientAchat">
+
+      </div>
+
+      <div class="divMidClient2" id="divMidClient2Val">
+
+        <div class="divMidClient2A">
+
+          <div class="divMidClient2A1">
+            <input type="text" placeholder="Recherche Abonné" class="textRechClientAbonn" [(ngModel)]="nomPriseChargeVente">
+          </div>
+
+          <div class="divMidClient2A2">
+
+            <ion-select class="textRechClientAbonn" (click)="chargerPriseCharge()" [(ngModel)]="nomClientAchatABonne">
+              <ion-select-option class="textJourna" *ngFor="let element of tabPriseChargeChargerVente" [value]="element.gmail">
+               {{element.gmail}}
+              </ion-select-option>
+            </ion-select>
+
+          </div>
+
+        </div>
+
+        <div class="divMidClient2B">
+          <input type="text" placeholder="Docteur Consultant" class="textRechClientAbonn" [(ngModel)]="docteurConsult">
+        </div>
+
+      </div>
+
+      <bR>
+
+      <ion-button class="btnMid" (click)="confirmerCouponAnnuler()">
+        Annuler
+      </ion-button>
+
+      <ion-button class="btnMid" (click)="valideCouponSimple()">
+        Valider
+      </ion-button>
+
+    </div>
+
+    <div class="cadreBtnImpreService">
+
+      <ion-button class="btnPreforma" (click)="printeJOurna()"  *ngIf="modeVente==false" >
+
+      <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+    </ion-button>
+
+    </div>
+
+
+      <div class="divQte" id="divQte" *ngIf="modeVente==false" >
+
+      <div class="div1qte" id="div1qte">
+
+        <div class="divSous1qte">
+
+          <div class="divSous1qteHH">
+
+            <span class="labelQTE">Tran. </span><br><span class="labelQTE"> {{qteProdFront}} </span>
+
+          </div>
+
+          <div class="divSous1qteBB">
+
+            <ion-select   [(ngModel)]="trancheValue" (click)="listenTranche()">
+
+              <ion-select-option *ngFor ="let indice of tabTrancheValue;let i=index" class="textselect" [value]="indice">
+
+                {{indice}}
+
+              </ion-select-option>
+
+            </ion-select>
+
+
+          </div>
+
+        </div>
+
+        <div class="divSous2qte">
+
+          <ion-input placeholder="client" class="textqte" id="textqte" [(ngModel)]="clientService"></ion-input>
+
+        </div>
+
+      </div>
+
+      <div class="div2qte" id="div2qte">
+
+        <ion-button class="btnJournal" (click)="valideCouponSimpleService()">
+
+          <ion-icon slot="icon-only" name="add-circle-outline" class="iconbas"></ion-icon>
+
+        </ion-button>
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="divCadreBas" id='divCadreBas' *ngIf="modeVente">
+
+
+      <div class="divRed">
+
+        <div class="divRed1">
+
+          <p class="textReduction"> Reduction de : {{affichPourc }}  % </p>
+
+        </div>
+
+        <div class="divRed1">
+
+          <p class="textReduction"> Qte = :  {{affichQteRed}} </p>
+
+        </div>
+
+      </div>
+
+
+
+
+      <div class="divQte" id="divQte">
+
+        <div class="div1qte" id="div1qte">
+
+          <div class="divSous1qte">
+
+            <span class="labelQTE">QTE</span><br><span class="labelQTE"> {{qteProdFront}} </span>
+
+          </div>
+
+          <div class="divSous2qte">
+
+            <ion-input placeholder="QTE" class="textqte" id="textqte" [(ngModel)]="qtProd"></ion-input>
+
+          </div>
+
+        </div>
+
+        <div class="div2qte" id="div2qte">
+
+          <ion-button class="btnJournal" (click)="ajourOrdonance()">
+
+            <ion-icon slot="icon-only" name="add-circle-outline" class="iconbas"></ion-icon>
+
+          </ion-button>
+
+        </div>
+
+      </div>
+
+      <p class="titre2coupon">NOUVEAU COUPON  </p>
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+        <ion-grid style="width: 96%;">
+          <ion-row class="header">
+            <ion-col>
+              N°
+            </ion-col>
+
+            <ion-col>
+              ID
+            </ion-col>
+
+            <ion-col size="3">
+              Nom
+            </ion-col>
+            <ion-col>
+              P.U
+            </ion-col>
+            <ion-col>
+              Qte
+            </ion-col>
+            <ion-col size="2">
+              P.T
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row class="contenuTable" *ngFor="let elemnt of tableCoupon">
+
+            <ion-col>
+              {{elemnt.num}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.ID_Produit}}
+            </ion-col>
+            <ion-col class="contenuTablenom">
+              {{elemnt.nom}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PU}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.Qte}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PT}}
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+        <br>
+        <br>
+
+      </div>
+
+      </div>
+
+      <div class="cadranPbas">
+
+        <div class="cadranPbas1">
+
+          <ion-button class="btnNetPAyer" (click)="corrigerCalcul()">
+            <span class="textNetPayer"> Net  {{netPayer}} </span>
+          </ion-button>
+
+        </div>
+
+        <div class="cadranPbas1">
+
+          <ion-button class="btnPreformaShow" (click)="printeJOurna()">
+
+            <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+          </ion-button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="divBasFin" id="divBasFin"  *ngIf="modeVente">
+
+        <div class="divBas1">
+
+            <ion-button class="btnPreforma" (click)="printeJOurna()" *ngIf="etatMasque==true">
+
+              <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+            </ion-button>
+
+            <ion-button class="btnPreforma" (click)="confirmerProfo()" *ngIf="etatMasque==true">
+
+              <ion-icon slot="icon-only" name="document-outline" class="iconbas"></ion-icon>
+
+            </ion-button>
+
+            <br><br>
+
+            <ion-button class="btsoumettreVente" (click)="confirmerCoupon()">
+              Valider
+            </ion-button>
+
+            <ion-button class="btsoumettreVente" (click)="supprimerCoupon()">
+              Supprimer
+            </ion-button>
+
+            <ion-button class="btsoumettreVente" (click)="retirerElement()">
+              Retirer
+            </ion-button>
+
+            <br><span > Choisir </span>
+
+            <ion-select [(ngModel)]="elemRetrait">
+
+              <ion-select-option *ngFor ="let element of tableCoupon" class="textselect">
+
+                {{element.num}}
+
+              </ion-select-option>
+
+            </ion-select>
+
+        </div>
+        <br>
+
+    </div>
+
+  </div>
+
+  <div class="pageVente" id="pageJournal">
+
+    <div class="cadreUltra">
+
+    <p class="titre2">JOURNAL {{modeLabel}}   </p>
+
+    <div class="cadreJournal">
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+          <ion-grid style="width: 100%;">
+            <ion-row class="header">
+              <ion-col>
+                ID
+              </ion-col>
+              <ion-col size="2">
+                NOM
+              </ion-col>
+              <ion-col>
+                P.U
+              </ion-col>
+
+              <ion-col *ngIf="modeVente">
+                QTE
+              </ion-col>
+
+              <ion-col *ngIf="modeVente==false">
+                TRANCHE
+              </ion-col>
+
+              <ion-col *ngIf="modeVente">
+                P.T
+              </ion-col>
+
+              <ion-col >
+                CLIENT
+              </ion-col>
+              <ion-col>
+                DATE
+              </ion-col>
+              <ion-col size="2">
+                HEURE
+              </ion-col>
+              <ion-col>
+                ID_Trav
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let elemnt of dataAChat">
+              <ion-col>
+                {{elemnt.ID_Produit}}
+              </ion-col>
+              <ion-col class="contenuTablenom" size="2">
+                {{elemnt.nom}}
+              </ion-col>
+              <ion-col>
+                {{elemnt.PU}}
+              </ion-col>
+              <ion-col class="contenuTablenom">
+                {{elemnt.Qte}}
+              </ion-col>
+              <ion-col *ngIf="modeVente">
+                {{elemnt.PT}}
+              </ion-col>
+              <ion-col class="contenuTablenom">
+                {{elemnt.Nom_client}}
+              </ion-col>
+
+              <ion-col>
+                {{elemnt.Dates}}
+              </ion-col>
+              <ion-col class="contenuTablenom" size="2">
+                {{elemnt.Dats_id}}
+              </ion-col>
+              <ion-col>
+                {{elemnt.id_travailleur}}
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+
+          <br>
+          <br>
+
+        </div>
+        </div>
+
+      <ion-button class="btnNetPAyer" (click)="calculeJounal()">
+          <span class="textNetPayer"> Net  {{netJournal}} </span>
+      </ion-button>
+
+    </div>
+    <div class="cadreJournalBAs">
+
+      <p class="titre2">Filtrage  </p>
+
+      <div class="cadreJournalBAs1">
+
+        <div class="divRechJourn">
+          <div class="divRechJourn1">
+
+            <span class="textJourna">Date</span>
+
+          </div>
+
+          <div class="divRechJourn2">
+
+            <ion-select (click)="getDistinctDate()" (ionChange)="afficheAchatDate()" [(ngModel)]="dateJournal">
+
+              <ion-select-option *ngFor="let element of dataProduitDistinct" class="textJourna" [value]="element.Dates">
+                {{element.Dates}}
+              </ion-select-option>
+
+            </ion-select>
+
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn">
+          <div class="divRechJourn1">
+
+            <span class="textJourna">Client(e)</span>
+
+          </div>
+
+          <div class="divRechJourn2">
+
+            <ion-select (click)="selectDistinctClient()" (ionChange)="afficheAchatClient()" [(ngModel)]="clientJournal">
+              <ion-select-option *ngFor="let element of dataProduitDistinct" class="textJourna" [value]="element.Nom_client">
+                {{element.Nom_client}}
+              </ion-select-option>
+            </ion-select>
+
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn"  *ngIf="modeVente">
+          <div class="divRechJourn1">
+
+            <span class="textJourna">Vendeur</span>
+
+          </div>
+
+          <div class="divRechJourn2">
+
+            <ion-select (click)="getUserPharnma()"  [(ngModel)]="idProdJournal">
+              <ion-select-option *ngFor="let element of dataUserRR" class="textJourna" [value]="element.id">
+                {{element.nom}}
+              </ion-select-option>
+
+            </ion-select>
+
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn"  *ngIf="modeVente">
+
+          <div class="divRechJourn1fin">
+
+            <span class="textJourna">Start of</span>
+
+          </div>
+
+          <div class="divRechJourn2fin">
+
+          <input type="texte" placeholder="Prefix" class="textJournStartOff" [(ngModel)]="prefixRech">
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn"  *ngIf="modeVente">
+
+          <div class="divRechJourn1fin">
+
+            <span class="textJourna">Mappage</span>
+
+          </div>
+
+          <div class="divRechJourn2fin">
+
+            <ion-select class="comboSettingProd" [(ngModel)]="typeMappage" (ionChange)="changeMappage()">
+              <ion-select-option class="textJourna">Universel</ion-select-option>
+              <ion-select-option class="textJourna">Particulier</ion-select-option>
+            </ion-select>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="cadreJournalBAs2">
+
+        <ion-button class="btnJournal" (click)="printeJOurna()">
+
+          <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+        </ion-button>
+
+        <ion-button class="btnJournal" *ngIf="modeVente">
+
+          <ion-icon slot="icon-only" name="rocket-sharp" class="iconbas"></ion-icon>
+
+        </ion-button>
+
+        <ion-button class="btnJournal" *ngIf="modeVente">
+
+          <ion-icon slot="icon-only" name="bar-chart-outline" class="iconbas"></ion-icon>
+
+        </ion-button>
+
+
+      </div>
+
+    </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="pageVente" id="pageMode">
+
+    <div class="cadreUltra">
+
+
+    <p class="titre2">MODE EXPERT</p>
+
+    <span class="textgras">Plaintes du Malade</span>
+
+    <div class="cadreMode1">
+
+    </div>
+
+      <ion-button class="btsoumettreExpert">
+        Actualiser
+      </ion-button>
+
+      <ion-button class="btsoumettreExpert">
+        Générer
+      </ion-button>
+
+
+    <br>
+    <br>
+
+    <div class="cadreMode2">
+
+    </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="pageSetting" id="pageSetting">
+
+    <p class="titre2">Parametres</p>
+
+    <span class="textgras">Opération {{modeLabel}}  </span>
+
+    <div class="cadreModelSetting">
+
+      <div class="cadreSetting">
+
+        <ion-button class="btnsetting" (click)="affichaPageAjout()">
+
+          <ion-icon slot="icon-only" name="add-circle-outline" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting1">Ajout</span>
+
+      </div>
+
+      <div class="cadreSetting">
+
+        <ion-button class="btnsetting"  (click)="affichaPageMiseJour()">
+
+          <ion-icon slot="icon-only" name="create-outline" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <bR>
+
+        <span class="descriptionSetting" id="descriptionSetting2">Mise à jour</span>
+
+      </div>
+
+      <div class="cadreSetting" >
+
+        <ion-button class="btnsetting" (click)="affichaPageRavitaillement()">
+
+          <ion-icon slot="icon-only" name="hourglass-outline" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting3">Ravitaillement</span>
+
+
+      </div>
+
+      <br>
+      <div class="cadreSetting">
+
+        <ion-button class="btnsetting"  >
+
+          <ion-icon slot="icon-only" name="open-outline" class="iconbas">
+
+          </ion-icon>
+
+          <ion-select class="comboSettingProd" [(ngModel)]="typeOpAbonne" (ionChange)="changeOpAbonnement()">
+            <ion-select-option class="textJourna" *ngFor="let element of tabInfoABnn" [value]="element">{{element}}</ion-select-option>
+
+          </ion-select>
+
+        </ion-button>
+
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting4">Gestion Abonnés</span>
+
+      </div>
+
+      <div class="cadreSetting">
+
+        <ion-button class="btnsetting" (click)="affichaPageSiganler()">
+
+          <ion-icon slot="icon-only" name="megaphone-outline" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting5">Signaler</span>
+
+      </div>
+
+      <div class="cadreSetting">
+
+        <ion-button class="btnsetting" (click)="affichaPageInitierStock()">
+
+          <ion-icon slot="icon-only" name="remove-circle" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting5">Minoration Stock</span>
+
+      </div>
+
+      <br><br><bR>
+
+      <ion-item>
+        <p>Affichage Explicite</p>
+
+        <ion-select class="comboSettingProd" (ionChange)="changeDescriptionSetting()" [(ngModel)]="typeAffich">
+          <ion-select-option>OUI</ion-select-option>
+          <ion-select-option>NON</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+
+        <p>Mode Vente   </p>
+
+        <ion-select class="comboSettingProd" (ionChange)="changeModeVente()" [(ngModel)]="typeAffich">
+          <ion-select-option>Produit</ion-select-option>
+          <ion-select-option>Service</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </div>
+    <br>
+
+    <span class="textgras">Opérations Systemes</span>
+    <br>
+      <div class="cadreSetting">
+
+        <ion-button class="btnsettingBas" (click)="lireTauxChange()">
+
+          <ion-icon slot="icon-only" name="logo-usd" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting6">Taux Change</span>
+
+      </div>
+
+      <div class="cadreSetting">
+
+        <ion-button class="btnsettingBas" *ngIf="oneLineStatus==false">
+
+        <ion-select class="comboSettingProd" [(ngModel)]="typeOpAbonne" (ionChange)="changetypeRapport()" >
+          <ion-select-option class="textJourna" *ngFor="let element of tabRapportType" [value]="element">{{element}}</ion-select-option>
+        </ion-select>
+
+      </ion-button>
+
+        <ion-button class="btnsettingBas" (click)="openRapport()" *ngIf="oneLineStatus==true">
+
+          <ion-icon slot="icon-only" name="terminal-outline" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting7">Rapport</span>
+
+      </div>
+
+      <div class="cadreSetting" *ngIf="oneLineStatus">
+
+
+        <ion-button class="btnsettingBas" (click)="openSecours()" >
+
+          <ion-icon slot="icon-only" name="file-tray-stacked-outline" class="iconbas">
+
+          </ion-icon>
+
+        </ion-button>
+
+        <br>
+
+        <span class="descriptionSetting" id="descriptionSetting7">Secours Mode</span>
+
+      </div>
+
+      <bR>
+
+      <ion-button class="btsoumettreExpert" (click)="deconnexion()">
+        Déconnexion
+      </ion-button>
+
+      <ion-button class="btsoumettreExpert" (click)="cloturedService()" *ngIf="oneLineStatus">
+        Cloturer
+      </ion-button>
+
+    <br>
+
+      <a href='' class="lienCTI">chambretechniqueinfo.com</a> <br>
+
+      <a href="" class="lienCTI">&copy; Tout Droit Reservé</a>
+
+
+
+    <br>
+
+  </div>
+
+  <div class="pageAjout" id="pageAjout">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnRetSeeting" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2">AJOUT {{modeLabel}}    </p>
+
+      </div>
+    </div>
+
+    <div class="cadreAjoutProduit">
+
+      <div class="divProSous">
+
+        <BR>
+
+      <div class="divcadre">
+        <div class="div1">
+
+          <div class="divSous1">
+            <span>Nom</span>
+          </div>
+
+          <div class="divSous2">
+
+            <input type="text" placeholder="Nom du produit**" [(ngModel)]="nomAJout">
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+            <span>Prix</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <input type="text" placeholder="son prix**" [(ngModel)]="prixAJout">
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="divcadre" *ngIf="modeVente==false">
+        <div class="div1">
+
+          <div class="divSous1">
+            <span>Duree</span>
+          </div>
+
+          <div class="divSous2">
+
+            <input type="text" placeholder="duree** ex: 2 mois" [(ngModel)]="dureService">
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+            <span>Tranche</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <input type="text" placeholder="tranche ** ex : 2" [(ngModel)]="trancheService">
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="divcadre"  *ngIf="modeVente">
+
+        <div class="div1">
+
+          <div class="divSous1">
+            <span>Stock</span>
+          </div>
+
+          <div class="divSous2">
+
+            <input type="text" placeholder="Stock**" [(ngModel)]="stockAJout">
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+            <span>Exp</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <ion-date [(ngModel)]="dateAJout"></ion-date>
+
+            <div class="divDate">
+
+              <div class="divDate1">
+
+                <ion-select class="spanText" [(ngModel)]="jourAnneDate" (ionChange)="propoJour()">
+
+                  <ion-select-option *ngFor="let element of tabDateJOur" [value]="element">
+                    {{element}}
+                  </ion-select-option>
+
+                </ion-select>
+
+              </div>
+
+              <div class="divDate1">
+
+                <ion-select class="spanText" [(ngModel)]="moisAnneDate" (ionChange)="propoMois()">
+
+                  <ion-select-option *ngFor="let element of tabDateMois" [value]="element">
+                    {{element}}
+                  </ion-select-option>
+
+                </ion-select>
+
+              </div>
+
+              <div class="divDate1">
+
+                <ion-select class="spanText" [(ngModel)]="propoAnneDate" (ionChange)="propoAnne()">
+
+                  <ion-select-option *ngFor="let element of tabDateAnne" [value]="element" >
+                    {{element}}
+                  </ion-select-option>
+
+                </ion-select>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <bR>
+
+    </div>
+
+    <p class="textReduction" *ngIf="modeVente">REDUCTION  </p>
+
+    <div class="divcadre" *ngIf="modeVente">
+
+      <bR>
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span> % </span>
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="ex : 30 " [(ngModel)]="pourcentageRed">
+
+        </div>
+
+      </div>
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Qte</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder=" > à ex: 9" [(ngModel)]="qteRed">
+
+        </div>
+
+      </div>
+
+      <br>
+
+    </div>
+
+
+
+      <br>
+        <span class="spanText">{{dataPropo}}</span>
+      <bR>
+
+
+      <ion-item>
+
+        <p>Changer la Devise</p>
+
+        <ion-select class="comboSettingProd" (ionChange)="changeDevise()" [(ngModel)]="typeDevise">
+
+          <ion-select-option *ngFor="let element of tabDevise" [value]="element.devise">
+            {{element.devise}}
+          </ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+      <div class="cadreCouvre"  *ngIf="modeVente" >
+
+        <div class="cadreCouvreInfo">
+          <br><br>
+
+          <ion-grid style="width: 96%;">
+
+            <ion-row class="header">
+
+              <ion-col>
+                NUM
+              </ion-col>
+              <ion-col>
+                NOM
+              </ion-col>
+              <ion-col>
+                P.U
+              </ion-col>
+              <ion-col>
+                STOCK
+              </ion-col>
+              <ion-col>
+                DATE
+              </ion-col>
+
+            </ion-row>
+
+          <ion-row class="contenuTable" *ngFor="let element of dataElementCreate">
+
+            <ion-col>
+              {{numAJout}}
+            </ion-col>
+            <ion-col>
+              {{element.nom}}
+            </ion-col>
+            <ion-col>
+              {{element.pu}}
+            </ion-col>
+            <ion-col>
+              {{element.stock}}
+            </ion-col>
+            <ion-col>
+              {{element.exp}}
+            </ion-col>
+
+          </ion-row>
+
+          </ion-grid>
+
+          <br><br>
+
+      </div>
+
+      </div>
+
+    </div>
+
+
+
+    <ion-button class="btPC" (click)="saveProdui()">
+        Enregistrer
+    </ion-button>
+
+    <br>
+    <br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="http://chambretechniqueinfo.com" class="lienCache"> {{repdataAJoutCreate | json}}  </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+
+  </div>
+
+  <div class="pageAMiseAJour" id="pageAMiseAJour">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnJournal" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2">MISE A JOUR {{modeLabel}}    </p>
+
+      </div>
+    </div>
+
+
+    <div class="divRechercheAjout">
+      <div class="divRech1">
+
+        <input type="text" placeholder="Recherche" [(ngModel)]="prefixProduiRav">
+
+      </div>
+
+      <div class="divRech2">
+
+        <ion-select (click)="selectLikeRav()" (ionChange)="rechercheProduiRav()" [(ngModel)]="nomProduitRav">
+
+          <ion-select-option *ngFor="let element of listProduiLikeRav" [value]="element.matricule">
+            {{element.nom}}
+          </ion-select-option>
+
+        </ion-select>
+
+      </div>
+
+    </div>
+
+    <br><BR>
+
+    <div class="divProSous">
+
+      <BR>
+
+    <div class="divcadre">
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Nom</span>
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="Nom du produit**" [(ngModel)]="nomMisAJour">
+
+        </div>
+
+      </div>
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Prix</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="son prix**" [(ngModel)]="prixMisAJour">
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="divcadre" *ngIf="modeVente==false">
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Duree</span>
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="duree** ex: 2 mois" [(ngModel)]="dureService">
+
+        </div>
+
+      </div>
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Tranche</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="tranche ** ex : 2" [(ngModel)]="trancheService">
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="divcadre" *ngIf="modeVente">
+      <div class="div1">
+
+        <div class="divSous1">
+          <span> </span>
+        </div>
+
+        <div class="divSous2">
+
+        </div>
+
+      </div>
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Exp</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <div class="divDate">
+
+            <div class="divDate1">
+
+              <ion-select class="spanText" [(ngModel)]="jourAnneDate" (ionChange)="propoJour()">
+
+                <ion-select-option *ngFor="let element of tabDateJOur" [value]="element">
+                  {{element}}
+                </ion-select-option>
+
+              </ion-select>
+
+            </div>
+
+            <div class="divDate1">
+
+              <ion-select class="spanText" [(ngModel)]="moisAnneDate" (ionChange)="propoMois()">
+
+                <ion-select-option *ngFor="let element of tabDateMois" [value]="element">
+                  {{element}}
+                </ion-select-option>
+
+              </ion-select>
+
+            </div>
+
+            <div class="divDate1">
+
+              <ion-select class="spanText" [(ngModel)]="propoAnneDate" (ionChange)="propoAnne()">
+
+                <ion-select-option *ngFor="let element of tabDateAnne" [value]="element" >
+                  {{element}}
+                </ion-select-option>
+
+              </ion-select>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <br>
+
+  </div>
+
+
+  <br>
+
+
+
+  <p class="textReduction" *ngIf="modeVente">REDUCTION</p>
+
+    <div class="divcadre" *ngIf="modeVente">
+
+      <bR>
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span> % </span>
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="ex : 30 " [(ngModel)]="pourcentageRed">
+
+        </div>
+
+      </div>
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Qte</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder=" > à ex: 9" [(ngModel)]="qteRed">
+
+        </div>
+
+      </div>
+
+      <br>
+
+    </div>
+
+    <bR>
+    <span class="spanText">{{dataPropo}}</span>
+    <BR>
+
+      <bR>
+
+        <ion-item>
+
+          <p>Changer la Devise</p>
+
+          <ion-select class="comboSettingProd" (ionChange)="changeDevise()" [(ngModel)]="typeDevise">
+            <ion-select-option >CDF</ion-select-option>
+            <ion-select-option >USD</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <bR>
+
+    <div class="cadreMiseJour" *ngIf="modeVente">
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+          <ion-grid style="width: 96%;">
+
+            <ion-row class="header">
+
+              <ion-col>
+                ID
+              </ion-col>
+              <ion-col>
+                NOM
+              </ion-col>
+              <ion-col>
+                P.U
+              </ion-col>
+              <ion-col>
+                DATE EXP
+              </ion-col>
+
+            </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let element of dataElementUpdate">
+
+              <ion-col>
+                {{element.id_prod}}
+              </ion-col>
+              <ion-col>
+                {{element.nom}}
+              </ion-col>
+              <ion-col>
+                {{element.pu}}
+              </ion-col>
+              <ion-col>
+                {{element.exp}}
+              </ion-col>
+
+            </ion-row>
+
+          </ion-grid>
+
+          <br><br>
+    </div>
+
+    </div>
+
+    </div>
+
+    <ion-button class="btPC" (click)="modifierProduit()">
+      Modifier
+    </ion-button>
+
+    <br>
+    <br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="http://chambretechniqueinfo.com" class="lienCache"> {{repdataModif | json}} </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+  </div>
+
+  <div class="pageAMiseAJour" id="pageAInitierStock">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnJournal" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2">MINORATION STOCK    </p>
+
+      </div>
+    </div>
+
+
+    <div class="divRechercheAjout">
+      <div class="divRech1">
+
+        <input type="text" placeholder="Recherche" [(ngModel)]="prefixProduiRav">
+
+      </div>
+
+      <div class="divRech2">
+
+        <ion-select (click)="selectLikeRav()" (ionChange)="rechercheInitialiser()" [(ngModel)]="nomProduitRav">
+
+          <ion-select-option *ngFor="let element of listProduiLikeRav" [value]="element.matricule">
+            {{element.nom}}
+          </ion-select-option>
+
+        </ion-select>
+
+      </div>
+
+    </div>
+
+    <br><BR>
+
+    <div class="divProSous">
+
+      <BR>
+
+    <div class="divcadre">
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Fixe</span>
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{stockFixe}}</span>
+
+        </div>
+
+      </div>
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Vari..</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{stockVariable}}</span>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divcadre">
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>id</span>
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{idInitialiser}}</span>
+
+
+        </div>
+
+      </div>
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>QTE</span>
+
+        </div>
+
+        <div class="divSous2">
+          <input type="text" placeholder="Valeur**" [(ngModel)]="qteMinorer">
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <br>
+
+  </div>
+
+  <span class="spanText">TOT VENDU : {{totVenduMin}}</span>
+
+    <bR>
+    <BR>
+     <ion-button class="btPC" (click)="minorerProduit()">
+      Minorer
+    </ion-button>
+
+    <br>
+    <div class="cadreMiseJour">
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+          <ion-grid style="width: 96%;">
+
+            <ion-row class="header">
+
+              <ion-col>
+                ID
+              </ion-col>
+              <ion-col>
+                NOM
+              </ion-col>
+              <ion-col>
+                P.U
+              </ion-col>
+              <ion-col>
+                DATE EXP
+              </ion-col>
+
+            </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let element of dataElementUpdate">
+
+              <ion-col>
+                {{element.id_prod}}
+              </ion-col>
+              <ion-col>
+                {{element.nom}}
+              </ion-col>
+              <ion-col>
+                {{element.pu}}
+              </ion-col>
+              <ion-col>
+                {{element.exp}}
+              </ion-col>
+
+            </ion-row>
+
+          </ion-grid>
+
+          <br><br>
+    </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <div class="pageRavitaillement" id="pageAbonne">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnJournal" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2"> GESTION DES ABONNES </p>
+
+      </div>
+    </div>
+
+    <div class="divRechercheAjout">
+      <div class="divRech1">
+
+        <input type="text" placeholder="Recherche" [(ngModel)]="prefixPriseCharge">
+
+      </div>
+
+      <div class="divRech2">
+
+        <ion-select (click)="selectLikePriseCharge()" (ionChange)="rechercheProduiRavPriseChage()" [(ngModel)]="nomPriseChRech">
+
+          <ion-select-option *ngFor="let element of tabInfoPrise" [value]="element.gmail">
+            {{element.gmail}}
+          </ion-select-option>
+
+        </ion-select>
+
+      </div>
+
+    </div>
+    <br><Br>
+
+    <div class="divProSous">
+
+      <BR>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Nom</span>
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" class="textRien" [(ngModel)]="priseNom" placeholder="ASKYAS">
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Pre..</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="Junior" [(ngModel)]="prisePrenom">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Sexe</span>
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="m ou f " [(ngModel)]="priseSexe">
+
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Tél</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="+243 970494397 " [(ngModel)]="priseTel">
+
+        </div>
+
+
+     </div>
+
+    </div>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Adr</span>
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" class="textRien" [(ngModel)]="priseAdr" placeholder="Av. De la Justice,N°10,Lingwala" >
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Mail</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" class="textRien" [(ngModel)]="priseGmail" placeholder="askyas17@gmail.com">
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Org.</span>
+        </div>
+
+        <div class="divSous2">
+
+          <ion-select (click)="getInfOrgPrise()" (ionChange)="rechercheProduiRavPriseChage()" [(ngModel)]="orgPresc">
+
+            <ion-select-option *ngFor="let element of dataOrgaPrise" [value]="element.id">
+              {{element.detail}}
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+      </div>
+
+    </div>
+
+    <br>
+
+    </div>
+
+    <bR>
+
+      <ion-button class="btPC" (click)="savePriseCharge()">
+        Enregistrer
+      </ion-button>
+
+      <ion-button class="btPC" (click)="updatePriseCharge()">
+        Modifier
+      </ion-button>
+
+
+
+
+      <br><br>
+
+
+
+    <br>
+
+    <div class="cadreRavSetting">
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+
+          <ion-grid style="width: 96%;">
+            <ion-row class="header">
+              <ion-col>
+                N°
+              </ion-col>
+              <ion-col>
+                NOM
+              </ion-col>
+              <ion-col>
+                PRENOM
+              </ion-col>
+              <ion-col>
+                SEXE
+              </ion-col>
+              <ion-col>
+                TEL
+              </ion-col>
+              <ion-col>
+                ADRESSE
+              </ion-col>
+              <ion-col>
+                GMAIL
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let element of tableCommandeRav">
+              <ion-col>
+                {{element.num}}
+              </ion-col>
+              <ion-col>
+                {{element.id_prod}}
+              </ion-col>
+              <ion-col>
+                {{element.nom}}
+              </ion-col>
+              <ion-col>
+                {{element.ajout}}
+              </ion-col>
+              <ion-col>
+                {{element.pucdf}}
+              </ion-col>
+              <ion-col>
+                {{element.pusd}}
+              </ion-col>
+              <ion-col>
+                {{element.pt}}
+              </ion-col>
+
+            </ion-row>
+
+          </ion-grid>
+          <br>
+
+      </div>
+      </div>
+
+
+    </div>
+
+
+
+    <ion-button class="btPC">
+
+      <ion-select class="spanText" [(ngModel)]="indiceRetrait">
+
+        <ion-select-option *ngFor="let element of tableCommandeRav" [value]="element.num" >
+          {{element.num}}
+        </ion-select-option>
+
+      </ion-select>
+
+    </ion-button>
+
+
+
+  </div>
+
+  <div class="pageRavitaillement" id="pageAbonne1">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnJournal" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2"> GESTION DE PRESCRIPTIONS  </p>
+
+      </div>
+    </div>
+
+    <div class="divRechercheAjout">
+      <div class="divRech1">
+
+        <input type="text" placeholder="Recherche" [(ngModel)]="prefixPrescr">
+
+      </div>
+
+      <div class="divRech2">
+
+        <ion-select (click)="rechercheDistincPresc()" (ionChange)="affiPrescption()" [(ngModel)]="nomPresc">
+
+          <ion-select-option *ngFor="let element of listPrescLike" [value]="element.id_prise">
+            {{element.id_prise}}
+          </ion-select-option>
+
+        </ion-select>
+
+      </div>
+
+    </div>
+    <br><Br>
+
+    <div class="divProSous">
+
+      <BR>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Nom</span>
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{nomPrescPrise}}</span>
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Pré..</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{prenomPrescPrise}}</span>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Sexe</span>
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{sexePrescPrise}}</span>
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Tél</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{telPrescPrise}}</span>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Adr</span>
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{adrPrescPrise}}</span>
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Mail</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{mailPrescPrise}}</span>
+
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+
+    </div>
+
+    <bR>
+
+    <br>
+
+    <div class="cadreRavSetting">
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+
+          <ion-grid style="width: 96%;">
+            <ion-row class="header">
+              <ion-col>
+                ORGAN.
+              </ion-col>
+              <ion-col>
+                E-MAIL
+              </ion-col>
+              <ion-col>
+                ID_ACHAT
+              </ion-col>
+              <ion-col>
+                ID_PRODUIT
+              </ion-col>
+              <ion-col>
+                PU
+              </ion-col>
+              <ion-col>
+                QTE
+              </ion-col>
+              <ion-col>
+                P.T
+              </ion-col>
+              <ion-col>
+                DOCTEUR
+              </ion-col>
+              <ion-col>
+                DATE
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let element of listPrescLikeTab">
+
+              <ion-col>
+                {{element.orgg}}
+              </ion-col>
+              <ion-col>
+                {{element.id_prise}}
+              </ion-col>
+              <ion-col>
+                {{element.id_achat}}
+              </ion-col>
+              <ion-col>
+                {{element.ID_Produit}}
+              </ion-col>
+              <ion-col>
+                {{element.PU}}
+              </ion-col>
+              <ion-col>
+                {{element.Qte}}
+              </ion-col>
+              <ion-col>
+                {{element.PT}}
+              </ion-col>
+              <ion-col>
+                {{element.docteur}}
+              </ion-col>
+              <ion-col>
+                {{element.Dats_id}}
+              </ion-col>
+
+            </ion-row>
+
+          </ion-grid>
+          <br><BR>
+
+      </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <ion-button class="btPC" (click)="validerCOmmandeFacture()">
+      Transmettre
+    </ion-button>
+
+  </div>
+
+
+  <div class="pageRavitaillement" id="pageRavitaillement">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnJournal" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2"> RAVITAILLEMENT  </p>
+
+      </div>
+    </div>
+
+    <div class="divRechercheAjout">
+      <div class="divRech1">
+
+        <input type="text" placeholder="Recherche" [(ngModel)]="prefixProduiRavProx">
+
+      </div>
+
+      <div class="divRech2">
+
+        <ion-select (click)="selectLikeRavPro()" (ionChange)="rechercheProduiRavTous()" [(ngModel)]="nomProduitRavPro">
+
+          <ion-select-option *ngFor="let element of listProduiLikeRavProx" [value]="element.matricule">
+            {{element.nom}}
+          </ion-select-option>
+
+        </ion-select>
+
+      </div>
+
+    </div>
+    <br><Br>
+
+    <div class="divProSous">
+
+      <BR>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Nom</span>
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{nomRavProx}}</span>
+
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Prix</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="son prix**" [(ngModel)]="prixRavProx">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span>Exp</span>
+        </div>
+
+        <div class="divSous2">
+
+          <div class="divDate">
+
+            <div class="divDate1">
+
+              <ion-select class="spanText" [(ngModel)]="jourAnneDate" (ionChange)="propoJour()">
+
+                <ion-select-option *ngFor="let element of tabDateJOur" [value]="element">
+                  {{element}}
+                </ion-select-option>
+
+              </ion-select>
+
+            </div>
+
+            <div class="divDate1">
+
+              <ion-select class="spanText" [(ngModel)]="moisAnneDate" (ionChange)="propoMois()">
+
+                <ion-select-option *ngFor="let element of tabDateMois" [value]="element">
+                  {{element}}
+                </ion-select-option>
+
+              </ion-select>
+
+            </div>
+
+            <div class="divDate1">
+
+              <ion-select class="spanText" [(ngModel)]="propoAnneDate" (ionChange)="propoAnne()">
+
+                <ion-select-option *ngFor="let element of tabDateAnne" [value]="element" >
+                  {{element}}
+                </ion-select-option>
+
+              </ion-select>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Ajout</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <input type="text" placeholder="Qte Aditionnelle**" [(ngModel)]="qteRavPro">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divcadre">
+
+      <div class="div1">
+
+        <div class="divSous1">
+          <span> </span>
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText"></span>
+
+        </div>
+
+      </div>
+
+      <div class="div2">
+
+        <div class="divSous1">
+          <span>Dispo</span>
+
+        </div>
+
+        <div class="divSous2">
+
+          <span class="spanText">{{stockRavPro}}</span>
+
+          <input type="text" class="textRien">
+
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+
+    </div>
+
+    <br>
+      <span class="spanText">{{dataPropo}}</span>
+    <bR>
+
+      <ion-button class="btnAjouter" (click)="ajoutProduitRav()">
+        <ion-icon slot="icon-only" name="add-circle-outline" class="iconbas"></ion-icon>
+      </ion-button>
+      <br><br>
+
+    <ion-item>
+      <p>Changer la Devise</p>
+
+      <ion-select class="comboSettingProd" (ionChange)="changeDeviseRav()" [(ngModel)]="typeDeviseRav">
+        <ion-select-option *ngFor="let element of tabDevise" [value]="element.devise">
+          {{element.devise}}
+        </ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <br>
+
+    <div class="cadreRavSetting">
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+
+          <ion-grid style="width: 96%;">
+            <ion-row class="header">
+              <ion-col>
+                N°
+              </ion-col>
+              <ion-col>
+                ID_PRODUIT
+              </ion-col>
+              <ion-col>
+                NOM
+              </ion-col>
+              <ion-col>
+                AJOUT
+              </ion-col>
+              <ion-col>
+                PU CDF
+              </ion-col>
+              <ion-col>
+                PU USD
+              </ion-col>
+              <ion-col>
+                P.T CDF
+              </ion-col>
+              <ion-col>
+                EXP
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let element of tableCommandeRav">
+              <ion-col>
+                {{element.num}}
+              </ion-col>
+              <ion-col>
+                {{element.id_prod}}
+              </ion-col>
+              <ion-col>
+                {{element.nom}}
+              </ion-col>
+              <ion-col>
+                {{element.ajout}}
+              </ion-col>
+              <ion-col>
+                {{element.pucdf}}
+              </ion-col>
+              <ion-col>
+                {{element.pusd}}
+              </ion-col>
+              <ion-col>
+                {{element.pt}}
+              </ion-col>
+              <ion-col>
+                {{element.exp}}
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+          <br><BR>
+
+      </div>
+      </div>
+
+      <ion-button class="btPC">
+        {{netPayerRav}}
+      </ion-button>
+
+    </div>
+
+    <ion-button class="btPC" (click)="checkerCoupon()" *ngIf="oneLineStatus">
+      Checker
+    </ion-button>
+
+    <ion-button class="btPC" (click)="retireProduitRAv()" *ngIf="oneLineStatus">
+      Retirer
+    </ion-button>
+
+    <ion-button class="btPC" *ngIf="oneLineStatus">
+
+      <ion-select class="spanText" [(ngModel)]="indiceRetrait">
+
+        <ion-select-option *ngFor="let element of tableCommandeRav" [value]="element.num" >
+          {{element.num}}
+        </ion-select-option>
+
+      </ion-select>
+
+    </ion-button>
+
+    <ion-button class="btPC" (click)="validerCOmmandeFacture()" *ngIf="oneLineStatus">
+      Enregistrer
+    </ion-button>
+
+    <br><br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Failed Operation</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <ion-grid style="width: 96%;">
+            <ion-row class="header">
+
+              <ion-col>
+                N°
+              </ion-col>
+
+              <ion-col>
+                ID_PRODUIT
+              </ion-col>
+              <ion-col>
+                NOM
+              </ion-col>
+              <ion-col>
+                AJOUT
+              </ion-col>
+
+              <ion-col>
+                PU USD
+              </ion-col>
+
+              <ion-col>
+                EXP
+              </ion-col>
+            </ion-row>
+
+
+
+            <ion-row class="contenuTable" *ngFor="let element of dataEchecRav">
+
+              <ion-col>
+                {{element.num}}
+              </ion-col>
+
+              <ion-col>
+                {{element.id_prod}}
+              </ion-col>
+              <ion-col>
+                {{element.nom}}
+              </ion-col>
+              <ion-col>
+                {{element.ajout}}
+              </ion-col>
+              <ion-col>
+                {{element.pusd}}
+              </ion-col>
+              <ion-col>
+                {{element.exp}}
+              </ion-col>
+
+              </ion-row>
+
+
+          </ion-grid>
+          <br><BR>
+
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <br><br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="http://chambretechniqueinfo.com" class="lienCache"> {{repInfoRav | json}} </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+  </div>
+
+
+
+  <div class="pageJournal" id="pageSecours">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnRetSeeting" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2"> SECOURS MODE  </p>
+
+      </div>
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <div class="cadreHautRapport1">
+
+      <fieldset class="grouperAllVide">
+        <legend>...</legend>
+
+
+        <div class="cadreHautRapport1A">
+
+          <span class="spanText">Date</span>
+
+        </div>
+        <div class="cadreHautRapport1A">
+
+          <ion-select (click)="getDistinctDateLocal()" (ionChange)="afficheAchatDateLocal(datePushScour)" [(ngModel)]="datePushScour">
+
+            <ion-select-option *ngFor="let element of dataDateDistinctLocal" class="textJourna" [value]="element">
+              {{element}}
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+        <div class="cadreHautRapport1A">
+
+          <div class="btnAffichX" (click)="getProduitFront()">
+
+            Afficher
+
+          </div>
+
+        </div>
+
+         </fieldset>
+
+        <br><bR>
+
+      </div>
+
+      <div class="cadreHautRapport1">
+
+        <fieldset class="grouperAll">
+
+          <legend>Operations Serveur  </legend>
+
+          <div class="cadreHH1">
+
+            <div  class="cadreHautRapport1B" (click)="getAchatLocal(datePushScour)">
+
+                <ion-icon slot="icon-only" name="arrow-up-circle" class="iconRapbas"></ion-icon>
+
+            </div>
+
+            <div  class="cadreHautRapport1B">
+
+                <ion-icon slot="icon-only" name="save" class="iconRapbas"></ion-icon>
+
+            </div>
+
+            <div  class="cadreHautRapport1B" (click)="actualisaationProduit()">
+
+                <ion-icon slot="icon-only" name="refresh-circle"   class="iconRapbas"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="cadreHH2">
+
+            <div  class="cadreHautRapport1B_Bas" (click)="getAchatLocal(datePushScour)">
+
+              Envoyer
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              Checking
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas" (click)="actualisaationProduit()">
+
+              Actualiser
+
+            </div>
+
+          </div>
+
+
+        </fieldset>
+
+        <br><bR>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <div class="cadreRapportCouvre">
+
+      <div class="cadreCouvreInfo">
+
+        <ion-grid style="width: 100%;">
+          <ion-row class="header">
+            <ion-col>
+              ID
+            </ion-col>
+            <ion-col size="2">
+              NOM
+            </ion-col>
+            <ion-col>
+              P.U
+            </ion-col>
+            <ion-col >
+              QTE
+            </ion-col>
+            <ion-col>
+              P.T
+            </ion-col>
+
+            <ion-col >
+              CLIENT
+            </ion-col>
+            <ion-col>
+              DATE
+            </ion-col>
+            <ion-col size="2">
+              HEURE
+            </ion-col>
+            <ion-col>
+              ID_Trav
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="contenuTable" *ngFor="let elemnt of dataAChatLocal">
+            <ion-col>
+              {{elemnt.ID_Produit}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.nom}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PU}}
+            </ion-col>
+            <ion-col class="contenuTablenom">
+              {{elemnt.Qte}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PT}}
+            </ion-col>
+            <ion-col class="contenuTablenom">
+              {{elemnt.Nom_client}}
+            </ion-col>
+
+            <ion-col>
+              {{elemnt.Dates}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.Dats_id}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.id_travailleur}}
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+
+        <br>
+        <br>
+
+      </div>
+
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <br>
+
+      <div class="cadreGloCash">
+
+          <div class="cadre1Rap">  <span class="spanText">Sauvés </span> </div>
+
+          <div class="cadre2Rap">
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{tabSauve.length}}
+
+            </div>
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{totSauver}}
+
+            </div>
+
+          </div>
+
+    </div>
+
+    <div class="cadreGloCash">
+
+      <div class="cadre1Rap"> <span class="spanText">Echoués</span> </div>
+      <div class="cadre2Rap">
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{tabEchoue.length}}
+
+        </div>
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{totEchec}}
+
+        </div>
+
+      </div>
+
+      </div>
+
+      <div class="cadreGloCash">
+
+        <div class="cadre1Rap"> <span class="spanText">Date Server</span>  </div>
+        <div class="cadre2Rap"> <span class="spanText">: {{ dateOPReturn  }} </span>  </div>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="https://chambretechniqueinfo.com" class="lienCache"> {{repCreateServer | json}} </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+
+  </div>
+
+
+  <div class="pageJournal" id="pageRapportGlobalVente">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnRetSeeting" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2"> RAPPORT GLOBAL DES VENTES    </p>
+
+      </div>
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <div class="cadreHautRapport1">
+
+      <fieldset class="grouperAllVide">
+        <legend>...</legend>
+
+
+        <div class="cadreHautRapport1A">
+
+          <span class="spanText">Date</span>
+
+        </div>
+        <div class="cadreHautRapport1A">
+
+          <ion-select (click)="getDistinctDateLocal()" (ionChange)="afficheAchatDateLocalGlobaVente(dateJournal)" [(ngModel)]="dateJournal">
+
+            <ion-select-option *ngFor="let element of dataDateDistinctLocal" class="textJourna" [value]="element">
+              {{element}}
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+        <div class="cadreHautRapport1A">
+
+          <div class="btnAffichX" (click)="afficheAchatDateLocalGlobaVenteGlobal(dateJournal)">
+
+            Global
+
+          </div>
+
+        </div>
+
+         </fieldset>
+
+        <br><bR>
+
+      </div>
+
+      <div class="cadreHautRapport1">
+
+        <fieldset class="grouperAll">
+          <legend>Documentation </legend>
+
+          <div class="cadreHH1">
+
+            <div  class="cadreHautRapport1B" (click)="geneteFileExcel()">
+
+                <ion-icon slot="icon-only" name="grid" class="iconRapbas"></ion-icon>
+
+            </div>
+
+            <div  class="cadreHautRapport1B"  >
+
+                <ion-icon slot="icon-only" name="document" class="iconRapbas"></ion-icon>
+
+            </div>
+
+
+            <div  class="cadreHautRapport1B" (click)="printeRapport()" *ngIf="oneLineStatus==false">
+
+              <ion-icon slot="icon-only" name="print-sharp" class="iconRapbas"></ion-icon>
+
+            </div>
+
+
+            <div  class="cadreHautRapport1B" (click)="telechargerFileExcel()" *ngIf="oneLineStatus==true">
+
+                <ion-icon slot="icon-only" name="archive"   class="iconRapbas"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="cadreHH2">
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              Excel
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              PDF
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas" *ngIf="oneLineStatus==false" (click)="printeRapport()">
+
+              Imprimer - {{taille}}
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas" *ngIf="oneLineStatus==true">
+
+              Téléch
+
+            </div>
+
+          </div>
+
+
+        </fieldset>
+
+        <br><bR>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <div class="cadreRapportCouvre">
+
+      <div class="cadreCouvreInfo">
+
+        <ion-grid style="width: 100%;">
+          <ion-row class="header">
+            <ion-col>
+              ID
+            </ion-col>
+            <ion-col size="2">
+              NOM
+            </ion-col>
+            <ion-col>
+             PRIX
+            </ion-col>
+            <ion-col size="2">
+              QTE
+            </ion-col>
+            <ion-col>
+              PT
+            </ion-col>
+            <ion-col>
+              STOCK
+            </ion-col>
+            <ion-col>
+              DATE
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row class="contenuTable" *ngFor="let elemnt of dataAChatLocalGlob">
+            <ion-col>
+              {{elemnt.ID_Produit}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.nom}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PU}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.Qte}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PT}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.stock_p}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.Dates}}
+            </ion-col>
+
+          </ion-row>
+
+        </ion-grid>
+
+        <br>
+        <br>
+
+      </div>
+
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <br>
+
+      <div class="cadreGloCash">
+
+          <div class="cadre1Rap">  <span class="spanText">CASH </span> </div>
+
+          <div class="cadre2Rap">
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{tabSimple.taillSimle}}
+
+            </div>
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{tabSimple.totSimle}}
+
+            </div>
+
+          </div>
+
+    </div>
+
+    <div class="cadreGloCash">
+
+      <div class="cadre1Rap"> <span class="spanText">CREDIT</span> </div>
+      <div class="cadre2Rap">
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{tabCredit.taillAB}}
+
+        </div>
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{tabCredit.totAB}}
+
+        </div>
+
+      </div>
+
+      </div>
+
+      <div class="cadreGloCash">
+
+        <div class="cadre1Rap"> <span class="spanText">TOT</span>  </div>
+        <div class="cadre2Rap"> <span class="spanText">: {{ totGenERap  }} </span>  </div>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="http://chambretechniqueinfo.com" class="lienCache"> {{repdataAJoutCreate | json}} </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+
+  </div>
+
+
+  <div class="pageJournal" id="pageRapportGlobal">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnRetSeeting" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2"> RAPPORT GLOBAL DES PRODUITS  </p>
+
+      </div>
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <div class="cadreHautRapport1">
+
+      <fieldset class="grouperAllVide">
+        <legend>...</legend>
+
+
+        <div class="cadreHautRapport1A">
+
+          <span class="spanText">Date</span>
+
+        </div>
+        <div class="cadreHautRapport1A">
+
+          <ion-select (click)="getDistinctDate()" (ionChange)="afficheAchatDate()" [(ngModel)]="dateJournal">
+
+            <ion-select-option *ngFor="let element of dataProduitDistinct" class="textJourna" [value]="element.Dates">
+              {{element.Dates}}
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+        <div class="cadreHautRapport1A">
+
+          <div class="btnAffichX" (click)="saveProdui()">
+
+            Afficher
+
+          </div>
+
+        </div>
+
+         </fieldset>
+
+        <br><bR>
+
+      </div>
+
+      <div class="cadreHautRapport1">
+
+        <fieldset class="grouperAll">
+
+          <legend>Documentation </legend>
+
+          <div class="cadreHH1">
+
+            <div  class="cadreHautRapport1B" (click)="geneteFileExcel()">
+
+                <ion-icon slot="icon-only" name="grid" class="iconRapbas"></ion-icon>
+
+            </div>
+
+            <div  class="cadreHautRapport1B">
+
+                <ion-icon slot="icon-only" name="document" class="iconRapbas"></ion-icon>
+
+            </div>
+
+            <div  class="cadreHautRapport1B" (click)="telechargerFileExcel()">
+
+                <ion-icon slot="icon-only" name="archive"   class="iconRapbas"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="cadreHH2">
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              Excel
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              PDF
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              Téléch
+
+            </div>
+
+          </div>
+
+
+        </fieldset>
+
+        <br><bR>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <div class="cadreRapportCouvre">
+
+      <div class="cadreCouvreInfo">
+
+        <ion-grid style="width: 100%;">
+          <ion-row class="header">
+            <ion-col>
+              ID
+            </ion-col>
+            <ion-col size="2">
+              NOM
+            </ion-col>
+            <ion-col>
+             PRIX
+            </ion-col>
+            <ion-col size="2">
+              STOCK
+            </ion-col>
+            <ion-col>
+              EXP
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row class="contenuTable" *ngFor="let elemnt of tabProduitLocal">
+            <ion-col>
+              {{elemnt.matricule}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.nom}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.pu}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.stock_p}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.date_exp}}
+            </ion-col>
+
+          </ion-row>
+
+        </ion-grid>
+
+        <br>
+        <br>
+
+      </div>
+
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <br>
+
+      <div class="cadreGloCash">
+
+          <div class="cadre1Rap">  <span class="spanText">CASH </span> </div>
+
+          <div class="cadre2Rap">
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{tabSimple.taillSimle}}
+
+            </div>
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{tabSimple.totSimle}}
+
+            </div>
+
+          </div>
+
+    </div>
+
+    <div class="cadreGloCash">
+
+      <div class="cadre1Rap"> <span class="spanText">CREDIT</span> </div>
+      <div class="cadre2Rap">
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{tabCredit.taillAB}}
+
+        </div>
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{tabCredit.totAB}}
+
+        </div>
+
+      </div>
+
+      </div>
+
+      <div class="cadreGloCash">
+
+        <div class="cadre1Rap"> <span class="spanText">TOT</span>  </div>
+        <div class="cadre2Rap"> <span class="spanText">: {{ totGenERap  }} </span>  </div>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="http://chambretechniqueinfo.com" class="lienCache"> {{repdataAJoutCreate | json}} </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+
+  </div>
+
+
+
+
+  <div class="pageJournal" id="pageRapport">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnRetSeeting" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2"> RAPPORT SYSTEMIQUE  </p>
+
+      </div>
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <div class="cadreHautRapport1">
+
+      <fieldset class="grouperAllVide">
+        <legend>...</legend>
+
+
+        <div class="cadreHautRapport1A">
+
+          <span class="spanText">Date</span>
+
+        </div>
+        <div class="cadreHautRapport1A">
+
+          <ion-select (click)="getDistinctDate()" (ionChange)="afficheAchatDate()" [(ngModel)]="dateJournal">
+
+            <ion-select-option *ngFor="let element of dataProduitDistinct" class="textJourna" [value]="element.Dates">
+              {{element.Dates}}
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+        <div class="cadreHautRapport1A">
+
+          <div class="btnAffichX" >
+
+            Afficher
+
+          </div>
+
+        </div>
+
+         </fieldset>
+
+        <br><bR>
+
+      </div>
+
+      <div class="cadreHautRapport1">
+
+        <fieldset class="grouperAll">
+          <legend>Documentation </legend>
+
+          <div class="cadreHH1">
+
+            <div  class="cadreHautRapport1B" (click)="geneteFileExcel()">
+
+                <ion-icon slot="icon-only" name="grid" class="iconRapbas"></ion-icon>
+
+            </div>
+
+            <div  class="cadreHautRapport1B">
+
+                <ion-icon slot="icon-only" name="document" class="iconRapbas"></ion-icon>
+
+            </div>
+
+            <div  class="cadreHautRapport1B" (click)="telechargerFileExcel()">
+
+                <ion-icon slot="icon-only" name="archive"   class="iconRapbas"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="cadreHH2">
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              Excel
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              PDF
+
+            </div>
+
+            <div  class="cadreHautRapport1B_Bas">
+
+              Téléch
+
+            </div>
+
+          </div>
+
+
+        </fieldset>
+
+        <br><bR>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <div class="cadreRapportCouvre">
+
+      <div class="cadreCouvreInfo">
+
+        <ion-grid style="width: 100%;">
+          <ion-row class="header">
+            <ion-col>
+              ID
+            </ion-col>
+            <ion-col size="2">
+              NOM
+            </ion-col>
+            <ion-col>
+              P.U
+            </ion-col>
+            <ion-col >
+              QTE
+            </ion-col>
+            <ion-col>
+              P.T
+            </ion-col>
+
+            <ion-col >
+              CLIENT
+            </ion-col>
+            <ion-col>
+              DATE
+            </ion-col>
+            <ion-col size="2">
+              HEURE
+            </ion-col>
+            <ion-col>
+              ID_Trav
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="contenuTable" *ngFor="let elemnt of dataAChat">
+            <ion-col>
+              {{elemnt.ID_Produit}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.nom}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PU}}
+            </ion-col>
+            <ion-col class="contenuTablenom">
+              {{elemnt.Qte}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PT}}
+            </ion-col>
+            <ion-col class="contenuTablenom">
+              {{elemnt.Nom_client}}
+            </ion-col>
+
+            <ion-col>
+              {{elemnt.Dates}}
+            </ion-col>
+            <ion-col class="contenuTablenom" size="2">
+              {{elemnt.Dats_id}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.id_travailleur}}
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+
+        <br>
+        <br>
+
+      </div>
+
+    </div>
+
+    <div class="cadreHautRapport">
+
+      <br>
+
+      <div class="cadreGloCash">
+
+          <div class="cadre1Rap">  <span class="spanText">CASH </span> </div>
+
+          <div class="cadre2Rap">
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{tabSimple.taillSimle}}
+
+            </div>
+
+            <div class="cadreIconD">
+
+              <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+            </div>
+
+            <div class="cadreContD">
+
+              {{tabSimple.totSimle}}
+
+            </div>
+
+          </div>
+
+    </div>
+
+    <div class="cadreGloCash">
+
+      <div class="cadre1Rap"> <span class="spanText">CREDIT</span> </div>
+      <div class="cadre2Rap">
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="stats-chart-outline" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{tabCredit.taillAB}}
+
+        </div>
+
+        <div class="cadreIconD">
+
+          <ion-icon slot="icon-only" name="logo-bitcoin" class="iconRapBas"></ion-icon>
+
+        </div>
+
+        <div class="cadreContD">
+
+          {{tabCredit.totAB}}
+
+        </div>
+
+      </div>
+
+      </div>
+
+      <div class="cadreGloCash">
+
+        <div class="cadre1Rap"> <span class="spanText">TOT</span>  </div>
+        <div class="cadre2Rap"> <span class="spanText">: {{ totGenERap  }} </span>  </div>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <ion-accordion-group expand="true">
+
+      <ion-accordion value="Premier" expand="true">
+
+        <ion-item slot="header">
+
+          <ion-button class="btnMenue">
+
+            <ion-icon slot="icon-only" name="trail-sign-outline" class="icon"> </ion-icon>
+
+          </ion-button>
+
+          <p class="titreMenu">Return Detail Server</p>
+
+        </ion-item>
+
+        <div slot="content">
+
+          <BR>
+
+            <a href="http://chambretechniqueinfo.com" class="lienCache"> {{repdataAJoutCreate | json}} </a>
+
+          <bR>
+        </div>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <bR><br>
+
+
+  </div>
+
+
+  <div class="pageSignaler" id="pageSignaler">
+
+    <div class="diVVtitre">
+      <div class="diVVtitre1">
+
+        <ion-button class="btnJournal" (click)="retourSetting()">
+          <ion-icon slot="icon-only" name="arrow-undo-circle-outline" class="iconbas"></ion-icon>
+        </ion-button>
+
+      </div>
+      <div class="diVVtitre2">
+
+        <p class="titre2">CARNET D'INFORMATION </p>
+
+      </div>
+    </div>
+
+    <div class="cadreAjoutProduit">
+
+      <div class="divRechercheAjout">
+        <div class="divRech1">
+
+          <span class="spanText">Motif</span>
+
+        </div>
+
+        <div class="divRech2">
+
+          <ion-select [(ngModel)]="motifValue" (ionChange)="controleMotif()">
+
+            <ion-select-option *ngFor="let element of tabMotif" [value]="element.motif">
+              {{element.motif}}
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+      </div>
+
+      <bR>
+
+        <div class="produitMotif" id="produitMotif">
+
+          <div class="produitMotif1">
+            <input type="text" placeholder="Recherche Produit" [(ngModel)]="prefixProdui">
+          </div>
+
+          <div class="produitMotif1">
+
+            <ion-select (click)="selectLike()" (ionChange)="rechercheProdui()" [(ngModel)]="nomProduit">
+
+              <ion-select-option *ngFor ="let titre of listProduiLike;let i=index" class="textselect" [value]="titre.nom">
+
+                {{titre.nom}}
+
+              </ion-select-option>
+
+            </ion-select>
+
+          </div>
+
+        </div>
+
+        <div class="montantMotif" id="montantMotif">
+
+          <input type="text" placeholder="Montant" [(ngModel)]="montantMotif">
+
+        </div>
+
+        <div class="detailMotif" id="detailMotif">
+
+          <input type="text" placeholder="Detail du Motif" [(ngModel)]="detailMotif">
+
+        </div>
+
+        <br><br>
+      <ion-button class="btPC" (click)="saveMotif()">
+        Soumettre
+      </ion-button>
+
+      <br><br>
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+            <ion-grid style="width: 90%;">
+
+              <ion-row class="header">
+
+                <ion-col>
+                  MOTIF
+                </ion-col>
+
+                <ion-col>
+                  DETAIL
+                </ion-col>
+                <ion-col>
+                  MONTANT
+                </ion-col>
+                <ion-col>
+                  DATE
+                </ion-col>
+                <ion-col>
+                  HEURE
+                </ion-col>
+
+              </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let element of tabMotifClient">
+
+              <ion-col>
+                {{element.nom_motif}}
+              </ion-col>
+              <ion-col>
+                {{element.detail_motif}}
+              </ion-col>
+              <ion-col>
+                {{element.montant}}
+              </ion-col>
+              <ion-col>
+                {{element.date_motif}}
+              </ion-col>
+              <ion-col>
+                {{element.date_timemotif}}
+              </ion-col>
+
+            </ion-row>
+
+            </ion-grid>
+    </div>
+
+    </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="pageVente" id="pageVenteSecours">
+
+    <div class="cadre" id="cadre">
+
+      <div class="divRecherche">
+        <div class="divRech1">
+
+          <input type="text" class="trechProd" placeholder="Recherche" [(ngModel)]="prefixProdui">
+
+        </div>
+
+        <div class="divRech2">
+
+          <ion-select (click)="selectLikeLocal(prefixProdui)" (ionChange)="rechercheProduiLocal()" [(ngModel)]="nomProduit">
+
+            <ion-select-option *ngFor ="let titre of listProduiLike;let i=index" class="textselect" [value]="titre.matricule">
+
+              {{titre.nom}}
+
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+        <!-- <ion-spinner name="crescent">Chosir</ion-spinner>--!-->
+
+      </div>
+
+      <div class="divCotRech">
+
+        <ion-button class="btnModele" (click)="tireCoupon()">
+
+          <ion-icon slot="icon-only" name="cart-outline" class="icon"> </ion-icon>
+          <span class="textautre">+ {{ taillCoupon }} </span>
+        </ion-button>
+
+      </div>
+
+      <div class="divcadre">
+        <div class="div1">
+
+          <div class="divSous1">
+            <span>Nom</span>
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte" [(ngModel)]="nomProd"> {{affichNom}} </span>
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+            <span>Prix</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte" [(ngModel)]="puProd"> {{affichPu}} </span>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="divcadre">
+        <div class="div1">
+
+          <div class="divSous1">
+
+            <span>Exp..</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichExp}} </span>
+
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+
+            <span>Descr.</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichCat}} </span>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="divcadre">
+        <div class="div1">
+          <div class="divSous1">
+
+            <span>Info</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichTraite}} </span>
+          </div>
+
+        </div>
+        <div class="div2">
+
+          <div class="divSous1">
+
+            <span>Descr.</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichAnti}} </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="divcadre">
+        <div class="div1">
+
+          <div class="divSous1">
+
+            <span>Info</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichPos}} </span>
+          </div>
+
+        </div>
+        <div class="div2">
+          <div class="divSous1">
+
+            <span>Descr.</span>
+
+          </div>
+
+          <div class="divSous2">
+
+            <span class="textConte"> {{affichAge}} </span>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div class="msgBox" id="msgBoxLocal">
+
+      <ion-button (click)="changeModeClient()" class="btnMidPriseCharge">
+
+        <ion-icon slot="icon-only" name="receipt-outline" class="iconbas"></ion-icon>
+
+      </ion-button>
+
+      <ion-button (click)="confirmerCouponAnnulerLocal()" class="btnMidQuitter">
+
+        <ion-icon slot="icon-only" name="close-outline" class="iconbas"></ion-icon>
+
+      </ion-button>
+
+      <bR>
+
+      <div class="divMidClient1" id="divMidClient1Val">
+
+        <input type="text" placeholder="Nom du client" class="textRechClientAbonn" [(ngModel)]="nomClientAchat">
+
+      </div>
+
+      <div class="divMidClient2" id="divMidClient2Val">
+
+        <div class="divMidClient2A">
+
+          <div class="divMidClient2A1">
+            <input type="text" placeholder="Recherche Abonné" class="textRechClientAbonn" [(ngModel)]="nomPriseChargeVente">
+          </div>
+
+          <div class="divMidClient2A2">
+
+            <ion-select class="textRechClientAbonn" (click)="chargerPriseCharge()" [(ngModel)]="nomClientAchatABonne">
+              <ion-select-option class="textJourna" *ngFor="let element of tabPriseChargeChargerVente" [value]="element.gmail">
+               {{element.gmail}}
+              </ion-select-option>
+            </ion-select>
+
+          </div>
+
+        </div>
+
+        <div class="divMidClient2B">
+          <input type="text" placeholder="Docteur Consultant" class="textRechClientAbonn" [(ngModel)]="docteurConsult">
+        </div>
+
+      </div>
+
+      <bR>
+
+      <ion-button class="btnMid" (click)="confirmerCouponAnnulerLocal()">
+        Annuler
+      </ion-button>
+
+      <ion-button class="btnMid" (click)="valideCouponSimpleLocal()">
+        Valider
+      </ion-button>
+
+    </div>
+
+    <div class="divCadreBas" id='divCadreBasLocal'>
+
+      <div class="divQte" id="divQte">
+
+        <div class="div1qte" id="div1qte">
+
+          <div class="divSous1qte">
+
+            <span class="labelQTE">QTE</span><br><span class="labelQTE"> {{qteProdFront}} </span>
+
+          </div>
+
+          <div class="divSous2qte">
+
+            <ion-input placeholder="QTE" class="textqte" id="textqte" [(ngModel)]="qtProd"></ion-input>
+
+          </div>
+
+        </div>
+
+        <div class="div2qte" id="div2qte">
+
+          <ion-button class="btnJournal" (click)="ajourOrdonance()">
+
+            <ion-icon slot="icon-only" name="add-circle-outline" class="iconbas"></ion-icon>
+
+          </ion-button>
+
+        </div>
+
+      </div>
+
+      <p class="titre2coupon" (click)="getProduitFront()"> NOUVEAU COUPON   </p>
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+        <ion-grid style="width: 96%;">
+          <ion-row class="header">
+            <ion-col>
+              N°
+            </ion-col>
+
+            <ion-col>
+              ID
+            </ion-col>
+
+            <ion-col size="3">
+              Nom
+            </ion-col>
+            <ion-col>
+              P.U
+            </ion-col>
+            <ion-col>
+              Qte
+            </ion-col>
+            <ion-col size="2">
+              P.T
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row class="contenuTable" *ngFor="let elemnt of tableCoupon">
+
+            <ion-col>
+              {{elemnt.num}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.ID_Produit}}
+            </ion-col>
+            <ion-col class="contenuTablenom">
+              {{elemnt.nom}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PU}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.Qte}}
+            </ion-col>
+            <ion-col>
+              {{elemnt.PT}}
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+        <br>
+        <br>
+
+      </div>
+
+      </div>
+
+      <div class="cadranPbas">
+
+        <div class="cadranPbas1">
+
+          <ion-button class="btnNetPAyer" (click)="corrigerCalcul()">
+            <span class="textNetPayer"> Net  {{netPayer}} </span>
+          </ion-button>
+
+        </div>
+
+        <div class="cadranPbas1">
+
+          <ion-button class="btnPreformaShow" (click)="printeJOurna()">
+
+            <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+          </ion-button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="divBasFin" id="divBasFinLocal">
+
+        <div class="divBas1">
+
+            <ion-button class="btnPreforma" (click)="printeJOurna()">
+
+              <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+            </ion-button>
+
+            <ion-button class="btsoumettreVente" (click)="confirmerCouponLocal()">
+              Valider
+            </ion-button>
+
+            <ion-button class="btsoumettreVente" (click)="supprimerCoupon()">
+              Supprimer
+            </ion-button>
+
+            <ion-button class="btsoumettreVente" (click)="retirerElement()">
+              Retirer
+            </ion-button>
+
+            <br><span > Choisir </span>
+
+            <ion-select [(ngModel)]="elemRetrait">
+
+              <ion-select-option *ngFor ="let element of tableCoupon" class="textselect">
+
+                {{element.num}}
+
+              </ion-select-option>
+
+            </ion-select>
+
+        </div>
+        <br>
+
+    </div>
+
+  </div>
+
+  <div class="pageJournal" id="pageJournalSecours">
+
+    <p class="titre2">JOURNAL </p>
+
+    <div class="cadreJournal">
+
+      <div class="cadreCouvre">
+
+        <div class="cadreCouvreInfo">
+
+          <ion-grid style="width: 100%;">
+            <ion-row class="header">
+              <ion-col>
+                ID
+              </ion-col>
+              <ion-col size="2">
+                NOM
+              </ion-col>
+              <ion-col>
+                P.U
+              </ion-col>
+              <ion-col >
+                QTE
+              </ion-col>
+              <ion-col>
+                P.T
+              </ion-col>
+
+              <ion-col >
+                CLIENT
+              </ion-col>
+              <ion-col>
+                DATE
+              </ion-col>
+              <ion-col size="2">
+                HEURE
+              </ion-col>
+              <ion-col>
+                ID_Trav
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="contenuTable" *ngFor="let elemnt of dataAChatLocal">
+              <ion-col>
+                {{elemnt.ID_Produit}}
+              </ion-col>
+              <ion-col class="contenuTablenom" size="2">
+                {{elemnt.nom}}
+              </ion-col>
+              <ion-col>
+                {{elemnt.PU}}
+              </ion-col>
+              <ion-col class="contenuTablenom">
+                {{elemnt.Qte}}
+              </ion-col>
+              <ion-col>
+                {{elemnt.PT}}
+              </ion-col>
+              <ion-col class="contenuTablenom">
+                {{elemnt.Nom_client}}
+              </ion-col>
+
+              <ion-col>
+                {{elemnt.Dates}}
+              </ion-col>
+              <ion-col class="contenuTablenom" size="2">
+                {{elemnt.Dats_id}}
+              </ion-col>
+              <ion-col>
+                {{elemnt.id_travailleur}}
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+
+          <br>
+          <br>
+
+        </div>
+        </div>
+
+      <ion-button class="btnNetPAyer" (click)="calculeJounalLocal()">
+          <span class="textNetPayer"> Net  {{netJournal}} </span>
+      </ion-button>
+
+    </div>
+    <div class="cadreJournalBAs">
+      <p class="titre2">Filtrage</p>
+
+      <div class="cadreJournalBAs1">
+
+        <div class="divRechJourn">
+          <div class="divRechJourn1">
+
+            <span class="textJourna">Date</span>
+
+          </div>
+
+          <div class="divRechJourn2">
+
+            <ion-select (click)="getDistinctDateLocal()" (ionChange)="afficheAchatDateLocal(dateJournal)" [(ngModel)]="dateJournal">
+
+              <ion-select-option *ngFor="let element of dataDateDistinctLocal" class="textJourna" [value]="element">
+                {{element}}
+              </ion-select-option>
+
+            </ion-select>
+
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn">
+          <div class="divRechJourn1">
+
+            <span class="textJourna">Client(e)</span>
+
+          </div>
+
+          <div class="divRechJourn2">
+
+            <ion-select (click)="selectDistinctClientLocal()" (ionChange)="afficheAchatClientLocal(clientJournal)" [(ngModel)]="clientJournal">
+              <ion-select-option *ngFor="let element of tabClientAchat" class="textJourna" [value]="element">
+                {{element}}
+              </ion-select-option>
+            </ion-select>
+
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn">
+          <div class="divRechJourn1">
+
+            <span class="textJourna">Produit</span>
+
+          </div>
+
+          <div class="divRechJourn2">
+
+            <ion-select (click)="selectDistinctProduitLocal()" (ionChange)="afficheAchatIdProduitLocal(idProdJournal)" [(ngModel)]="idProdJournal">
+              <ion-select-option *ngFor="let element of tabIDProdAchat" class="textJourna" [value]="element">
+                {{element}}
+              </ion-select-option>
+
+            </ion-select>
+
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn">
+
+          <div class="divRechJourn1fin">
+
+            <span class="textJourna">Start of</span>
+
+          </div>
+
+          <div class="divRechJourn2fin">
+
+          <input type="texte" placeholder="Prefix" class="textJournStartOff" [(ngModel)]="prefixRech">
+
+          </div>
+
+        </div>
+
+        <div class="divRechJourn">
+
+          <div class="divRechJourn1fin">
+
+            <span class="textJourna">Mappage</span>
+
+          </div>
+
+          <div class="divRechJourn2fin">
+
+            <ion-select class="comboSettingProd" [(ngModel)]="typeMappage" (ionChange)="changeMappage()">
+              <ion-select-option class="textJourna">Universel</ion-select-option>
+              <ion-select-option class="textJourna">Particulier</ion-select-option>
+            </ion-select>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="cadreJournalBAs2">
+
+        <ion-button class="btnJournal" (click)="printeJOurna()">
+
+          <ion-icon slot="icon-only" name="print-sharp" class="iconbas"></ion-icon>
+
+        </ion-button>
+
+        <ion-button class="btnJournal">
+
+          <ion-icon slot="icon-only" name="rocket-sharp" class="iconbas"></ion-icon>
+
+        </ion-button>
+
+        <ion-button class="btnJournal">
+
+          <ion-icon slot="icon-only" name="bar-chart-outline" class="iconbas"></ion-icon>
+
+        </ion-button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+<span class="textConte" [(ngModel)]="idProd">  </span>
+
+</div>
+
+
+
+<div id="pageImpression" class="pageImpression">
+
+  <p class="titreFac1" *ngFor="let element of InfoImpression"> {{element.detail}}</p><img src="assets/images/logoPharma.jpeg" class="logoTicket"> <div class="divHaut"> <div class="divHaut1"><p class="titreFac3">TRAV  {{id}} </p></div> <div class="divHaut2"><p class="titreFacx3">{{titreFac}} N° {{idFac}} </p></div></div>
+
+  <div class="colHaut"></div>
+
+
+  <div class="cadranOne">
+
+    <div class="cadranOne1G">
+
+      NOM
+
+    </div>
+
+    <div class="cadranOne2G">
+
+      PU
+
+    </div>
+    <div class="cadranOne2G" *ngIf="modeVente==true">
+
+      QTE
+
+    </div>
+
+    <div class="cadranOne2G" *ngIf="modeVente==false">
+
+      TRANCHE
+
+    </div>
+
+    <div class="cadranOne2G">
+
+      PT
+
+    </div>
+
+  </div>
+
+  <div class="cadranOne" *ngFor="let elemnt of dataTabImpessio;let i=index">
+
+    <div class="cadranOne1">
+
+      {{elemnt.nom}}
+
+    </div>
+
+    <div class="cadranOne2">
+
+      {{elemnt.PU}}
+
+    </div>
+    <div class="cadranOne2" >
+
+      {{elemnt.Qte}}
+
+    </div>
+
+    <div class="cadranOne2" >
+
+      {{elemnt.PT}}
+
+    </div>
+
+  </div>
+
+
+    <bR>
+
+  <div class="divBas"><div class="divBas2Tick"> <div class="divBas21"> <div class="divBas21A"> <span class="titreFac1">NET</span> </div> <div class="divBas21B"> <span class="titreFac1"> {{netTicker}} CDF</span>  </div> </div> <div class="divBas22"> <div class="divBas21A"><span class="titreFac1">TVA</span>  </div> <div class="divBas21B"> <span class="titreFac1">0.05</span> </div> </div> </div>  <div class="divBas1Tick"> <span class="titreFac2http"> https://cti-congo.com </span> <br> <span class="titreFac1"> Client (e)  {{ clientTicker }}</span><br> <span class="titreFac2http"> Fait {{dateHeureOpe}}</span>  </div> </div>
+
+</div>
+
+
+
+
+<div id="pageImpressionRapport" class="pageImpression">
+
+  <p class="titreFac1" *ngFor="let element of InfoImpressionGlob"> {{element.detail}}</p>
+
+  <div class="colHaut"></div>
+
+  <table >
+
+     <th class="titreFac1" > {{InfoImpressionGlobRow[0]}} </th>  <th class="titreFac1">  {{InfoImpressionGlobRow[1]}} </th>  <th class="titreFac1">  {{InfoImpressionGlobRow[2]}} </th>  <th class="titreFac1">  {{InfoImpressionGlobRow[3]}} </th>
+
+    <br>
+
+    <tr class="titreFac2" *ngFor="let elemnt of tabImpressionGroup;let i=index">
+      <td class="titreFac2">{{elemnt.nom}}</td> <td class="titreFac2">{{elemnt.PT / elemnt.Qte}}</td> <td class="titreFac2">{{elemnt.Qte}}</td> <td class="titreFac2">{{elemnt.PT}}</td>
+    </tr>
+
+
+
+
+    </table>
+
+    <bR>
+
+     <!--  <span class="titreFac2http"> https://chambretechniqueinfo.com </span>
+
+    <div class="divBas"><div class="divBas2Tick"> <div class="divBas21"> <div class="divBas21A"> <span class="titreFac1">NET</span> </div> <div class="divBas21B"> <span class="titreFac1"> {{netTicker}} CDF</span>  </div> </div> <div class="divBas22"> <div class="divBas21A"><span class="titreFac1">TVA</span>  </div> <div class="divBas21B"> <span class="titreFac1">0.05</span> </div> </div> </div>  <div class="divBas1Tick"> <span class="titreFac2http"> https://chambretechniqueinfo.com </span> <br> <span class="titreFac1"> Client (e)  {{ clientTicker }}</span><br> <span class="titreFac2http"> Fait {{dateHeureOpe}}</span>  </div> </div> --!-->
+
+</div>
+
+
+<ion-button class="btnImprimexx" (click)="imprimerFacture()">Imprimer</ion-button>
+
+<ion-button class="btnImprimexx" (click)="printeJOurna()">tester Impria</ion-button>
+
+
+
+</ion-content>
+
+
+

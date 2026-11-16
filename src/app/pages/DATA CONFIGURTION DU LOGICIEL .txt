@@ -1,0 +1,10 @@
+DATA CONFIGURTION DU LOGICIEL :
+
+1 ajour de la able reduction (cote online et offline)
+
+1. ajoout la de table acces_service 
+3. ajour de la table Service (vente de service)
+4 ajoir bde la tableachat service 
+
+
+errer  a corriger pour l ajour service ; il faut verifier etatt d autorisation

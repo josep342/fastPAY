@@ -1,0 +1,4014 @@
+
+.divApp{
+    width:100%;
+    height:auto;
+
+    display:none;
+}
+
+td{
+    background-color: red;
+}
+
+:root{
+
+    --taillTicket:80mm;
+
+}
+
+// la c;ongiegurateion dkei la page d eimpreisseion
+.pageImpression{
+    background-color: white;
+}
+.titreTicket{
+
+    color:black;
+    background-color: white;
+    font-weight: bold;
+    border-top:2px;
+    border-bottom:2px;
+    border-left:2px;
+    border-right:2px;
+    font-size: 12px;
+
+    width: 20%;
+}
+.titreTicketLigne{
+    color:black;
+    background-color: white;
+    font-weight: bold;
+    border-top:2px;
+    border-bottom:2px;
+    border-left:2px;
+    border-right:2px;
+    font-size: 9px;
+}
+.titreTickeCol{
+    color:black;
+    background-color: white;
+    font-weight: bold;
+    border-top:2px;
+    border-bottom:2px;
+    border-left:2px;
+    border-right:2px;
+    font-size: 10px;
+
+    width: 20%;
+
+}
+
+
+
+@media print{
+
+
+  .cadranOne{
+
+      width:98%;
+      height:auto;
+
+      margin-left: 1%;
+      margin-top: 10px;
+
+      border: solid 1px black;
+
+
+  }
+
+  .cadranOne1{
+
+      width:40%;
+      height:100%;
+      font-family: monospace,'Times New Roman','Arial Narrow';
+
+      border: solid 1px black;
+      display:inline-block
+
+
+  }
+
+  .cadranOne1G{
+
+      width:40%;
+      height:100%;
+      font-family: monospace,'Times New Roman','Arial Narrow';
+      font-weight: bold;
+
+      border: solid 1px black;
+      display:inline-block
+
+
+  }
+
+  .cadranOne2{
+
+      width:20%;
+      height:100%;
+      font-family: monospace,'Times New Roman','Arial Narrow';
+
+      border: solid 1px black;
+      display:inline-block
+
+
+  }
+
+  .cadranOne2G{
+
+      width:20%;
+      height:100%;
+      font-family: monospace,'Times New Roman','Arial Narrow';
+      font-weight: bold;
+
+      border: solid 1px black;
+      display:inline-block
+
+
+  }
+
+    .pageImpression{
+
+        width:80mm;
+
+        //width:var(--taillTicket);
+        height:auto;
+        font-family: monospace,'Times New Roman','Arial Narrow';
+
+        margin-left: 2px;
+        margin-right: 2px;
+
+        margin-top: 5px;
+
+        padding-left: 2px;
+        padding-right: 2px;
+
+        position: absolute;
+
+    }
+    .titreFond1{
+        width: 20%;
+    }
+
+    .titreFond1{
+        width: 30%;
+    }
+
+
+    .colHaut{
+        width: 100%;
+        height: 5px;
+
+
+        border:2px solid black;
+    }
+
+    .ligneFac{
+
+      margin-top: 20px;
+
+    }
+
+
+    .titreFac1{font-family: monospace,'Times New Roman','Arial Narrow';font-size:14px;font-weight: bold;color:black;text-align:center;margin-top:0px} .titreFac2{font-family: monospace,'Times New Roman','Arial Narrow';font-size:12px;font-weight: bold;color:black; text-align:left;top:0;margin-top:1px;} .logoTicket{width: 20%;height: 30px;border-radius:50%;margin-left: 30%;box-shadow: 5px 5px 2px gray;}.divHaut{width:100%;height:30px;}.divHaut1{width:55%;height:100%;display:inline-block;}.divHaut2{width:38%;height:100%;display:inline-block;}.titreFac3{font-size:11px;font-weight: bold;color:black; text-align:left} .titreFacx3{font-family: monospace,'Times New Roman','Arial Narrow';font-size:11px;font-weight: bold;color:black; text-align:center;top:0;margin-top:1px;} .divBas{width:90%;height:auto;margin-left: 5%;} .divBas1Tick{width:100%;height:60%} .divBas2Tick{width:100%;height:38%;margin-top:4px} .divBas21{width:100%;height:49%;} .divBas22{width:100%;height:49%;} .divBas21A{width:30%;height:100%; display:inline-block;border-bottom:none;border-top:solid 2px black;border-left:solid 2px black}.divBas21B{width:65%;height:100%;border:solid 2px black;border-bottom:none; display:inline-block} th{color:black;font-size:13px;font-weight:bold;width:20%} td{font-size:10px;font-weight:bold;width:20%}
+    .titreFac2http{font-family: monospace,'Times New Roman','Arial Narrow';font-size:11px;font-weight: bold;color:black;text-align:center}
+
+    th{
+
+        color:black;
+        background-color: white;
+        font-weight: bold;
+        border-top:2px;
+        border-bottom:2px;
+        border-left:2px;
+        border-right:2px;
+        font-size: 14px;
+
+        width: 20%;
+
+
+    }
+    tr{
+        color:black;
+        background-color: white;
+        font-weight: bold;
+        border-top:2px;
+        border-bottom:2px;
+        border-left:2px;
+        border-right:2px;
+        font-size: 12px;
+
+
+    }
+    td{
+        color:black;
+        background-color: white;
+        font-weight: bold;
+        border-top:2px;
+        border-bottom:2px;
+        border-left:2px;
+        border-right:2px;
+        font-size: 12px;
+
+        width: 20%;
+
+    }
+    .divApp{
+        display:none !important;
+    }
+
+    .divConn{
+        display:none !important;
+    }
+    .pageServer{
+        display:none !important;
+    }
+    .servbt2{
+        display:none !important;
+    }
+    .btnImprimexx{
+        display:none !important;
+    }
+
+    @page{
+        size:80mm auto;
+        margin:0
+    }
+    .tablFac{
+
+        width: 90%;
+
+    }
+
+
+}
+
+@keyframes animationMid{
+    0%{
+
+        background-size: 100%;
+        transform: scale(0.5);
+
+    }
+    60%{
+
+        background-size: 100%;
+        transform: scale(1);
+    }
+}
+@keyframes transition{
+
+    0%{
+        background-image: url("/assets/images/pharm8.jpeg");
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: 100%;
+        transform: scale(1);
+
+    }
+    30%{
+        background-image: url('/assets/images/ima6.jpeg');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: 100%;
+        transform: scale(1);
+    }
+
+    60%{
+        background-image: url('/assets/images/pharm8.jpeg');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: 100%;
+        transform: scale(1);
+    }
+    80%{
+        background-image: url('/assets/images/phar5.jpeg');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes transitionBas{
+
+    0%{
+        background-image: url("/assets/images/dr3.jpeg");
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: 100%;
+        transform: scale(1);
+
+    }
+    30%{
+        background-image: url('/assets/images/pharma3.png');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: 100%;
+        transform: scale(1);
+    }
+
+    90%{
+        background-image: url('/assets/images/pharma6*.jpeg');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: 100%;
+        transform: scale(1);
+    }
+
+
+}
+
+ion-button{
+    --background:rgb(16, 2, 65);
+    --color:white;
+}
+ion-icon{
+    --color:red;
+
+}
+.textselect{
+    color:white;
+}
+.trechProd{
+    margin-left: 10%;
+
+}
+.text{
+    color:black;
+    font-size: 15px;
+}
+
+@media (max-width:600px){
+    ion-content{
+        --background:rgb(174, 174, 212);
+
+        //animation: infinite 30s transition;
+    }
+
+    // widget PAGE SERVER
+
+    .servcadre0{
+        width: 100%;
+        height: 500px;
+        margin-top:5%;
+
+    }
+
+    .servcadre00{
+        width: 100%;
+        height: 15%;
+
+    }
+
+    .servcadre1{
+        width: 80%;
+        height: 60%;
+
+        margin-left: 10%;
+        border-radius: 14px;
+
+        display:block;
+        background-color: white;
+
+    }
+
+    .servcadre2{
+        width: 80%;
+        height: 60%;
+
+        margin-left: 10%;
+
+        background-color: white;
+        border-radius: 14px;
+        display:none;
+
+    }
+
+    .servcadre3{
+        width: 100%;
+        height: 15%;
+
+    }
+    .servbt1{
+        --background:blue;
+        --color:white;
+        font-size:21px;
+        font-weight:bold;
+
+        margin-left:55%;
+        margin-top:10%;
+
+        display:none
+    }
+
+    .servbt2{
+        --background:red;
+        --color:white;
+        font-size:15px;
+        font-weight:bold;
+
+        margin-left:35%;
+        margin-top:10%;
+    }
+    .servdivAdr{
+
+        width: 94%;
+        height: 50px;
+        border-radius: 30px;
+        margin-top: 15%;
+        margin-left: 3%;
+
+        border:solid rgb(174, 174, 212) 1px;
+    }
+
+    // FIN WIDGET SERVER
+
+
+    //CONFIG PAGE CONNEXION
+
+    .concadreSous{
+        width: 100%;
+        height: 90%;
+        margin-top: 5%;
+        background-color: rgb(196, 42, 42);
+
+    }
+
+    .condiv2{
+
+        width: 96%;
+        height: 60px;
+        margin-left: 2%;
+        margin-top: 15%;
+        background-color:white;// rgb(190, 182, 182);
+        border:1px solid rgb(158, 158, 201);
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+
+    .condiv2PH{
+        width: 98%;
+        height: 60px;
+        margin-left: 1%;
+        margin-top: 15%;
+        background-color:white;// rgb(190, 182, 182);
+        border:1px solid rgb(158, 158, 201);
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+    }
+
+
+    input{
+        outline: none;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 5%;
+        width: 80%;
+        background-color:white;
+        border-top:none;
+        border-bottom:none;
+        border-left:none;
+        border-right:none;
+        color:black
+    }
+    .conbtconnexion{
+        --background:red;
+        --color:white;
+        font-weight: bold;
+
+        width: 96%;
+        height: 40px;
+        margin-left: 2%;
+        margin-top: 10%;
+        border-radius:25%;
+
+    }
+
+    .divConn{
+        width: 94%;
+        //height: 97%;
+        height: 600px;
+        margin-left: 2%;
+        margin-top: 1%;
+        border-radius:13px;
+        background-color: rgb(16, 2, 65);
+
+        display: none;
+    }
+
+    .cadreSousv{
+        width: 100%;
+        height: 90%;
+        margin-top: 0px;
+        border-radius:13px;
+        background:linear-gradient(to left,rgb(174, 174, 212),white ) ;
+
+    }
+
+
+
+    .condivbtn{
+
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 25%;
+        background-color: red;
+        //border:2px solid black;
+        border-radius:20px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+
+    }
+
+
+    .condivSous1{
+
+        width: 20%;
+        height: 100%;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0
+
+    }
+
+    .condivSous2{
+
+        width: 80%;
+        height: 100%;
+        display: inline-block;
+
+    }
+
+    .contitre1{
+        color:black;
+        font-weight: bold;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .contitre2{
+        color:black;
+        font-weight: italic;
+        font-size: 22px;
+        text-align: center;
+    }
+    .contitre{
+        font-size: 25px;
+        font-weight: bold;
+        color:black;
+        margin-top: 1%;
+        text-align: center;
+    }
+    .conlienCTI{
+        font-size: 15px;
+        color:white;
+        margin-left: 20%;
+    }
+    .conlabel{
+        font-weight: bold;
+
+
+    }
+
+    // FIN WIDGET
+
+    .pageJournal{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border:solid white 2px;
+        display: none;
+    }
+    .pageAccueilStynth{
+
+        width: 100%;
+        height: auto;
+        background:rgb(174, 174, 212);
+    }
+    .pageVente{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: none;
+    }
+    .pageMode{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border:solid white 2px;
+        display: none;
+
+
+    }
+    .pageSetting{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+        display: none;
+    }
+
+    th{
+        color:white;
+        background-color: rgb(16, 2, 65);
+        font-size: 20px;
+    }
+
+    .pageAjout{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+
+        display: none;
+    }
+
+    .pageAMiseAJour{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+        display: none;
+    }
+    .pageRavitaillement{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+        display: none;
+    }
+    .pageSignaler{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+
+        display: none;
+    }
+
+
+
+    .cadre{
+        width: 98%;
+        height: 400px;
+        overflow: auto;
+
+        margin-left:1%;
+        background:linear-gradient(to left, rgb(211, 211, 214),rgb(174, 174, 212)); //white;
+        border-radius:20px 20px 0px 0px
+    }
+
+    .cadreUltra{
+
+        width: 98%;
+        height: 100%;
+        overflow: auto;
+
+        margin-left:1%;
+        background:linear-gradient(to left, rgb(211, 211, 214),rgb(174, 174, 212)); //white;
+        border-radius:20px 20px 0px 0px
+
+    }
+    .divCadreBas{
+        width: 98%;
+        height: 400px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 8px;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+
+    }
+
+    .divQte{
+        width: 68%;
+        height: 80px;
+        margin-left:30%;
+        margin-top: 5%;
+        border-radius: 15px;
+        background-color: rgb(211, 211, 214);
+
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+    }
+
+    .div1qte{
+        width: 60%;
+        height: 70%;
+        //margin-left:10%;
+        margin-top: 5%;
+        background-color:white;
+        display: inline-block;
+    }
+    .div2qte{
+
+        width: 30%;
+        height: 70%;
+        //margin-left:10%;
+        margin-top: 5%;
+        background-color:red;
+        display: inline-block;
+
+    }
+
+    .divSous1qte{
+
+        width: 40%;
+        height: 100%;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0
+
+    }
+
+    .divSous1qteService{
+
+        width: 40%;
+        height: 100%;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0;
+
+        overflow: auto;
+        overflow-y: auto;
+
+    }
+
+    .divSous2qte{
+
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+
+    }
+
+    .textqte{
+        margin-left: 10px;
+        font-size: 20px;
+        color:black;
+       //margin-top: 10px;
+    }
+    .labelQTE{
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight: bold;
+        color:white;
+    }
+    .cadreJournal{
+        width: 98%;
+        height: 350px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+
+    }
+
+    .cadreRavSetting{
+        width: 98%;
+        height: 350px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+
+    }
+
+    .cadreMiseJour{
+        width: 98%;
+        height: 350px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+
+    }
+
+
+    .cadreJournalBAs1{
+        width: 76%;
+        margin-left: 1%;
+        height: 75%;
+        display: inline-block;
+        background-color: white;
+    }
+
+    .cadreJournalBAs2{
+        width: 20%;
+        height: 50%;
+        margin-left: 1%;
+        display: inline-block;
+        background-color: white;
+        //align-items: center;
+    }
+    .cadreJournalBAs{
+        width: 98%;
+        height: 300px;
+        background-color: rgb(211, 211, 214);
+
+    }
+    .cadreIgnalerMotif{
+        width: 98%;
+        height: auto;
+        //overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+    }
+
+    .cadreAjoutProduit{
+        width: 98%;
+        height: auto;
+        //overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+    }
+
+    .cadreHautAccueilSynth{
+
+        width: 98%;
+        height: 250px;
+
+        margin-left:1%;
+        margin-top: 15px;
+        background-color: rgb(211, 211, 214);
+        border-radius: 8px;
+
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 3px;
+        padding-top: 3px;
+    }
+
+    .cadreHautRapport{
+
+        width: 98%;
+        height: 180px;
+
+        margin-left:1%;
+        background-color: rgb(211, 211, 214);
+        border-radius: 8px;
+
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 3px;
+        padding-top: 3px;
+    }
+
+    .cadreHautRapport1{
+
+        width: 98%;
+        height: 70px;
+        display: block;
+        margin-top: 2px;
+
+
+    }
+
+    .cadreHautRapportAccuel{
+        width: 98%;
+        height: 70px;
+        display: block;
+        margin-top: 2px;
+
+
+
+
+        //display: inline-block;
+    }
+
+    .cadreAjoutProduitBAs{
+        width: 98%;
+        height: 200px;
+        background-color: rgb(211, 211, 214);
+    }
+
+    .divBasFin{
+
+        width: 100%;
+        height: 310px;
+        background-color: white;
+
+    }
+    .divBas1{
+
+        width: 80%;
+        height: 290px;
+        margin-left: 10%;
+        border-radius: 15px 15px 1px 1px;
+        background-color: rgb(16, 2, 65);
+       // display: inline-block;
+
+    }
+    .divBas2{
+
+        width: 48%;
+        height: 200px;
+        display: inline-block;
+
+    }
+
+    .menu0{
+        width: 100%;
+        height: 70px;
+        background-color:rgb(16, 2, 65)
+
+    }
+    .divContent{
+        width: 100%;
+        height: auto;
+
+    }
+    .textConte{
+        margin-left: 7%;
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        color:black;
+
+    }
+
+    .menu1{
+        width: 78%;
+        height: 100%;
+        display: inline-block;
+       // background-color:rgb(16, 2, 65);
+        //border:1px white solid;
+
+    }
+
+    .menu2{
+        width: 20%;
+        height: 90%;
+        display: inline-block;
+        position:absolute;
+        right:0px;
+        top:10px;
+        //transform: translateY(-50%);
+
+        //border:1px red solid;
+
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+
+    .menu3{
+        width: 10%;
+        height: 100%;
+        display: none;
+        background-color: rgb(175, 167, 167);
+        //border:1px red solid;
+    }
+
+    .divcadre{
+
+        width: 100%;
+        height: 120px;
+
+        margin-top: 5px;
+        background:linear-gradient(to left,rgb(174, 174, 212), rgb(199, 195, 195));
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+
+    }
+
+    .div1{
+
+        width: 98%;
+        height: 40%;
+        margin-left: 1%;
+        margin-top: 0%;
+        background-color:white;
+        //border:2px solid black;
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+
+    .div2{
+
+        width: 98%;
+        height: 50px;
+        margin-left: 1%;
+        margin-top: 5%;
+        background-color: white;
+        //border:2px solid black;
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+
+    .divbtn{
+
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 5%;
+        background-color: red;
+        //border:2px solid black;
+        border-radius:20px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+
+
+    .divSous1{
+
+        width: 20%;
+        height: 100%;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0
+
+    }
+
+    .divSous2{
+
+        width: 80%;
+        height: 100%;
+        display: inline-block;
+
+    }
+
+    .titre1{
+        color:white;
+        font-weight: bold;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .titre1Menu{
+        color:white;
+        font-weight: bold;
+        font-size: 23px;
+        text-align: center;
+        background-color: none;
+    }
+
+    .titre2coupon{
+        color:black;
+        font-weight: bold;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .titre2{
+        color:black;
+        font-weight: italic;
+        font-size: 22px;
+        text-align: center;
+    }
+    .btnAction{
+        background-color: rgb(16, 2, 65);
+        --background:red;
+        color:white;
+        width: 55px;
+        height: 55px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .iconAction{
+        color:white
+    }
+    .btsoumettre{
+
+        --background: red;
+        color:white;
+        font-weight: bold;
+
+        border-top:none;
+        border-bottom:none;
+        border-left:none;
+        border-right:none;
+        font-size: 13px;
+
+    }
+
+    .btnAjouter{
+        --background:red;
+        --color:white;
+        margin-left: 80%;
+    }
+
+    .btsoumettreExpert{
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 5%;
+
+        --background:red;
+        font-size: 15px;
+        font-weight: bold;
+        color:white;
+
+    }
+    .btsoumettreVente{
+
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 5%;
+
+        --background:red;
+        font-size: 15px;
+        font-weight: bold;
+        color:white;
+    }
+
+    .btPC{
+
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 5%;
+
+        --background:red;
+        font-size: 15px;
+        font-weight: bold;
+        color:white;
+    }
+
+    ion-input{
+        color:black;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        width: 80%;
+        margin-left: 2%;
+        font-size: 14px;
+        font-weight: bold;
+
+    }
+    ion-label{
+        color:black;
+        font-size: 20px;
+        margin-left: 10%;
+        margin-top: 20px;
+    }
+
+    ion-radio{
+        --color:yellow;
+    }
+
+    .btsousText{
+        width: 100%;
+        height: 70%;
+        --background:black;
+        --color:yellow;
+        //font-weight: bold;
+    }
+
+    a{
+        font-size: 20px;
+
+    }
+    p{
+        font-size: 17px;
+        font-weight: bold;
+
+    }
+    li{
+        font-size:25px;
+        margin-top: 5px;
+    }
+
+    ul{
+        margin-left: 4px;
+    }
+
+
+    ion-title{
+        font-size:15px;
+    }
+    .iconMarket{
+        --color:red;
+        --background:red;
+    }
+
+
+
+    .MenuHAut{
+        width: 100%;
+        height: 90px;
+        //border: solid red 2px;
+        background-color: rgb(16, 2, 65);
+
+        animation: transition 30s infinite;
+    }
+
+    .MenuHAutConne{
+        height: 90px;
+        //border: solid red 2px;
+        background-color: rgb(16, 2, 65);
+
+        animation: transition 30s infinite;
+    }
+
+    .MenuBAs{
+
+        width: 100%;
+        height: 200px;
+        //border: solid red 5px;
+
+        animation: transitionBas 40s infinite;
+    }
+
+    .logo{
+        width: 40%;
+        height: 80%;
+        border-radius:50%;
+        margin-left: 30%;
+        margin-top:5%;
+
+        box-shadow: 5px 5px 2px gray;
+
+    }
+    .diVVtitre{
+        width: 100%;
+        height: 80px;
+
+
+    }
+    .diVVtitre1{
+        width: 17%;
+        height: 100%;
+        display: inline-block;
+
+    }
+    .diVVtitre2{
+        width: 82%;
+        height: 100%;
+        display: inline-block;
+    }
+
+
+
+    .iconbas{
+        --color:white;
+        --background:blue;
+    }
+
+    ion-item{
+        --background: rgb(16, 2, 65);
+        --color:white
+    }
+    .btdepliant{
+        background-color:rgb(16, 2, 65);
+        color:red;
+
+    }
+
+    .menudepliant{
+        --background: rgb(16, 2, 65);
+        --color:white
+    }
+    .divRecherche{
+
+        width: 80%;
+        height:45px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 20px;
+        //border:1px black solid;
+        background-color: white;
+        display: inline-block;
+
+    }
+    .divRechercheAjout{
+        width: 80%;
+        height:45px;
+        margin-left: 10%;
+        margin-top: 10px;
+        border-radius: 20px;
+        border:1px black solid;
+        background-color: white;
+    }
+
+    .divRech1{
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+
+
+    }
+    .divRech2{
+        width: 40%;
+        height: 100%;
+        display: inline-block;
+
+
+    }
+
+    .divCotRech{
+        width: 15%;
+        height:45px;
+        margin-left: 2px;
+        margin-top: 5px;
+
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+    }
+    input{
+        width: 90%;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        background-color: white;
+        color:black;
+
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        font-size: 16px;
+        font-weight: bold;
+
+        outline: none;
+
+        margin-top: 5px;
+    }
+    .btnModele{
+        --background:rgb(16, 2, 65);
+        width: 80%;
+        height: 80%;
+    }
+    .textautre{
+        color:white;
+        font-weight: bold;
+    }
+    .header{
+        color:white;
+        font-weight: bold;
+        background-color: rgb(16, 2, 65);
+        font-size: 22px;
+        //width: 300px;
+    }
+    .contenuTable{
+        color:black;
+        background-color: rgb(166, 181, 223);
+        font-size: 20px;
+
+        margin-top: 5px;
+
+    }
+
+    .contenuTablenom{
+        color:white;
+        background-color: rgb(16, 2, 65);
+        font-size: 22px;
+
+    }
+
+
+    ion-grid{
+        width: 1000px;
+    }
+    .divRechJourn{
+        width: 98%;
+        height:45px;
+        margin-left: 1%;
+        margin-top: 5px;
+        //border:1px black solid;
+        background-color: rgb(16, 2, 65);
+
+    }
+
+
+
+    .divRechJournfin{
+        width: 96%;
+        height:45px;
+        margin-left: 2%;
+        margin-top: 5px;
+        //border:1px black solid;
+        background-color: rgb(16, 2, 65);
+
+    }
+    .divRechJourn1{
+        width: 40%;
+        height:100%;
+        display: inline-block;
+    }
+    .divRechJourn2{
+        width: 60%;
+        height:100%;
+        display: inline-block;
+        //background-color: gray;
+    }
+
+
+    .divRechJourn1fin{
+        width: 40%;
+        height:100%;
+        display: inline-block;
+    }
+    .divRechJourn2fin{
+        width: 60%;
+        height:100%;
+        display: inline-block;
+       // background-color: white;
+    }
+
+    .textJourna{
+        font-weight: bold;
+        margin-left: 5px;
+        color:white
+        //font-size: 12px;
+    }
+    .textJournaDetail{
+        font-weight: bold;
+        margin-left: 5px;
+        color:red;
+        //font-size: 14px;
+
+    }
+    .textJournStartOff{
+        height: 30px;
+    }
+    ion-select{
+        color:red;
+    }
+    .btnJournal{
+        margin-top: 12%;
+        margin-left: 15%;
+
+        --background: red;
+        --color:white
+
+
+    }
+
+    .btnRetSeeting{
+        margin-top: 12%;
+        margin-left: 15%;
+
+        --background: red;
+        --color:white
+    }
+
+    .btnPreforma{
+        margin-top: 2%;
+        margin-left: 25%;
+
+        --background: red;
+        --color:white
+    }
+    .btnPreformaShow{
+
+
+        margin-left: 25%;
+
+        --background: red;
+        --color:white
+
+    }
+    .btnNetPAyer{
+        margin-top: 2%;
+        margin-left: 30%;
+        height: 35px;
+
+        --background: red;
+        --color:white
+    }
+    .textNetPayer{
+        color:white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .textgras{
+        font-weight: bold;
+        color:black;
+        margin-left: 1%;
+    }
+
+    .cadreMode1{
+
+        width: 98%;
+        height: 200px;
+        background-color: rgb(199, 195, 195);
+        //border:1px black solid;
+        //overflow: auto;
+        border-radius:11px 11px 0px 0px;
+        margin-left: 1%;
+    }
+
+    .cadreMode2{
+
+        width: 98%;
+        height: 300px;
+        background-color: rgb(199, 195, 195);
+        border-radius:0px 0px 11px 11px;
+        overflow: auto;
+        margin-left: 1%;
+
+    }
+
+
+
+    .cadreModelSetting{
+
+        width: 98%;
+        height: 300px;
+        background:linear-gradient(to left,rgb(174, 174, 212), rgb(199, 195, 195));
+        border-radius:11px 11px 0px 0px;
+        margin-left: 1%;
+
+    }
+    .cadreSetting{
+        width: 30%;
+        height:80px;
+        margin-left: 2%;
+        margin-top: 7%;
+        //border:1px solid blue;
+        display: inline-block;
+
+        align-content: center;
+
+    }
+    .descriptionSetting{
+        font-size: 10px;
+    }
+    .lienCache{
+        text-decoration:none;
+    }
+
+    .btnMenu{
+        --background: white;
+
+        width: 250px;
+        font-weight: bold;
+
+
+    }
+    .btnMenuBas{
+        margin-top: 30%;
+        margin-left: 10%;
+
+        --background: red;
+        --color:white
+
+
+    }
+
+    .btnsetting{
+        margin-top: 10%;
+        margin-left: 25%;
+
+        --background: red;
+        --color:white
+
+    }
+    .btnsettingBas{
+
+        margin-top: 10%;
+        margin-left: 25%;
+
+        --background: rgb(16, 2, 65);
+        --color:white
+    }
+
+    .iconRapbas{
+
+        margin-top: 10%;
+        margin-left: 25%;
+
+        --background: white;
+        --color:white
+    }
+    .descriptionSetting{
+        margin-left: 20%;
+        margin-top: 10px;
+        color:black;
+    }
+    .comboSettingProd{
+        margin-left: 15%;
+    }
+    .lienCTI{
+        font-size: 13px;
+        color:black;
+        margin-left: 10%;
+    }
+
+
+    .msgBox{
+        width: 100%;
+        height: 250px;
+        background-color: rgb(26, 65, 238);
+        border-radius:5px;
+
+        box-shadow: 8px 10px 5px black;
+        display: none;
+
+        animation: ease-out 1s animationMid;
+    }
+    .divMidClient1{
+        width: 96%;
+        height: 20%;
+        background-color: white;
+        border-radius:5px;
+        margin-left: 2%;
+        margin-top: 3%;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        display: block;
+    }
+    .divMidClient2{
+        width: 96%;
+        height: 20%;
+        background-color: white;
+        border-radius:5px;
+        margin-left: 2%;
+        margin-top: 3%;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        display: none;
+    }
+    .divMidClient2A{
+        width: 60%;
+        height: 100%;
+        display: inline-block;
+    }
+    .divMidClient2A1{
+        width: 48%;
+        height: 100%;
+        display: inline-block;
+    }
+    .divMidClient2A2{
+        width: 48%;
+        height: 100%;
+        display: inline-block;
+    }
+    .divMidClient2B{
+        width: 35%;
+        height: 100%;
+        display: inline-block;
+    }
+    .textRechClientAbonn{
+        width: 90%;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .textSelectMedia{
+        width: 60%;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        margin-left:10%
+    }
+    .btnMid{
+        --background:red;
+        --color:white;
+        font-weight:bold;
+        margin-left: 3%;
+        margin-top: 0px;
+        width: 45%;
+    }
+
+
+
+    .btnMidQuitter{
+        --background:white;
+        --color:black;
+        margin-top: 10px;
+        margin-left: 3%;
+    }
+    .btnMidPriseCharge{
+        --background:white;
+        --color:black;
+        margin-top: 10px;
+        margin-left: 60%;
+    }
+    .btnMidPriseChargeImprio{
+        --background:white;
+        --color:black;
+        margin-top: 10px;
+        margin-left: 5%;
+    }
+    .spanText{
+
+        color:black;
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+    .divDate{
+        width: 90%;
+        height: 90%;
+        margin-top: 2px;
+        margin-left: 5%;
+        background-color: rgb(248, 248, 253);
+        border-radius: 6px;
+    }
+    .divDate1{
+        width: 25%;
+        height: 90%;
+
+        margin-left: 5%;
+        margin-top: 3px;
+        background-color: rgb(211, 211, 214);
+        display: none;
+        border-radius: 6px;
+
+        display: inline-block;
+    }
+
+    .produitMotif{
+        width: 80%;
+        height: 60px;
+        margin-left:10%;
+        margin-top:15px;
+        border-radius:8px;
+
+        border:1px gray solid;
+    }
+    .produitMotif1{
+        width: 48%;
+        height: 100%;
+
+        display: inline-block;
+    }
+    .montantMotif{
+        width: 80%;
+        height: 60px;
+        margin-left:10%;
+        margin-top:15px;
+        border-radius:8px;
+
+        border:1px gray solid;
+    }
+
+    .detailMotif{
+        width: 80%;
+        height: 120px;
+        margin-left:10%;
+        margin-top:15px;
+        border-radius:8px;
+
+        border:1px gray solid;
+    }
+
+    .cadreCouvreInfo{
+        width: 2000px;
+        height: 100%;
+
+    }
+
+    .cadreCouvre{
+
+        width: 100%;
+        height: auto;
+
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        background-color: white;
+
+    }
+
+    .titreMenu{
+        font-size: 14px;
+    }
+
+    .cadranPbas{
+
+        width: 90%;
+        height: 80px;
+        margin-left:5%;
+
+        box-shadow: 8px;
+
+        background-color: rgb(211, 211, 214) ;
+
+
+    }
+
+    .cadranPbas1{
+
+        width: 48%;
+        height: 100%;
+
+        display: inline-block;
+
+    }
+
+    .cadreRapportCouvre{
+
+        width: 100%;
+        height: 450px;
+        overflow: auto;
+        overflow-x: auto;
+
+        background-color: white;
+
+    }
+
+    .cadreHautRapport1A{
+
+        width: 30%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 2%;
+
+    }
+
+    .titreSynthAccueil{
+
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: black;
+        font-size: 18px;
+    }
+
+    .cadreHautIconSyntheseB_Bas{
+
+        width: 96%;
+        height: 20px;
+        color:black;
+        padding-left: 2%;
+
+    }
+
+    .cadreHautIconSynthese{
+
+        width: 20%;
+        height: 60px;
+        margin-left: 40%;
+        //margin-top: 2px;
+
+        background-color: rgb(16, 2, 65);
+        border-radius: 45%;
+        color:white;
+
+        padding-left: 10px;
+        padding-top: 10px;
+
+
+    }
+
+    .cadreBasSecours{
+        width: 12%;
+        height: 12%;
+        display: inline-block;
+        margin-left: 20%;
+        margin-top: 5px;
+
+        background-color: rgb(16, 2, 65);
+        border-radius: 15px;
+        color:white;
+
+        padding-left: 4px;
+
+        padding-top: 2px;
+
+    }
+
+    .cadreHautRapport1B{
+
+        width: 12%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 15%;
+        //margin-top: 2px;
+
+        background-color: rgb(16, 2, 65);
+        border-radius: 15px;
+        color:white;
+
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+
+    }
+    .cadreHautRapport1B_Bas{
+
+        width: 25%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 4%;
+        //margin-top: 2px;
+
+
+        color:black;
+
+        padding-left: 10px;
+
+
+
+    }
+    .cadreCouvrFilBack{
+
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        margin-top: 10%;
+
+    }
+
+    .cadreSepaVenteAccueil{
+
+        width: 90%;
+        height: 50px;
+
+        // display: flex;
+        margin-left:5%;
+        margin-top: 2px;
+
+    }
+
+    .grouperAll{
+        border-radius: 11px;
+        border: 2px rgb(16, 2, 65) solid;
+        color:rgb(16, 2, 65)
+    }
+    .cadreGloCash{
+        width: 100%;
+        height: auto;
+
+    }
+
+
+.cadre1Rap{
+
+    width: 20%;
+    height: 40px;
+    overflow: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    // display: flex;
+    margin-left:1%;
+
+    margin-top: 2px;
+
+    display: inline-block;
+
+}
+
+.cadre2Rap{
+
+    width: 76%;
+    height: 40px;
+    overflow: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    // display: flex;
+    margin-left:1%;
+    margin-top: 2px;
+
+
+    display: inline-block;
+
+}
+
+
+
+
+}
+
+@media (min-width:601px) and (max-width:1024px){
+
+}
+
+@media (min-width:1025px){
+
+    ion-content{
+        --background:rgb(184, 178, 178);
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+
+
+    }
+
+    .cadreGloCash{
+        width: 32%;
+        height: 50px;
+        display: inline-block;
+
+    }
+
+
+    .cadre1Rap{
+
+        width: 20%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+        // display: flex;
+        margin-left:1%;
+
+        margin-top: 2px;
+
+        display: inline-block;
+
+    }
+
+    .cadre2Rap{
+
+        width: 76%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+        // display: flex;
+        margin-left:1%;
+        margin-top: 2px;
+
+
+        display: inline-block;
+
+    }
+
+    .grouperAll{
+        border-radius: 11px;
+        border: 2px rgb(16, 2, 65) solid;
+        color:rgb(16, 2, 65)
+    }
+
+    .cadreSepaVenteAccueil{
+
+        width: 90%;
+        height: 50px;
+
+        // display: flex;
+        margin-left:5%;
+        margin-top: 25px;
+
+    }
+
+    .titreSynthAccueil{
+
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: black;
+        font-size: 20px;
+    }
+
+    .cadreHautRapport1B_Bas{
+
+        width: 25%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 5%;
+
+
+
+        color:black;
+
+        padding-left: 10px;
+
+    }
+
+    .cadreHautRapport1B{
+
+        width: 12%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 15%;
+
+
+        background-color: rgb(16, 2, 65);
+        border-radius: 15px;
+
+    }
+
+    .cadreBasSecours{
+
+        width: 12%;
+        height: 12%;
+        display: inline-block;
+        margin-left: 20%;
+        margin-top: 5px;
+
+
+        background-color: rgb(16, 2, 65);
+        border-radius: 15px;
+
+        padding-left: 4px;
+
+        padding-top: 2px;
+
+    }
+
+    .cadreHautIconSyntheseB_Bas{
+
+        width: 96%;
+        height: 20px;
+        color:black;
+        padding-left: 2%;
+
+    }
+
+    .cadreHautIconSynthese{
+
+        width: 80px;
+        height: 70px;
+        margin-left: 40%;
+        //margin-top: 2px;
+
+        background-color: rgb(16, 2, 65);
+        border-radius: 45%;
+        color:white;
+
+        padding-left: 11px;
+        padding-top: 11px;
+
+
+    }
+
+
+    .cadreHautRapport1A{
+
+        width: 30%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 2%;
+
+    }
+
+    .cadreRapportCouvre{
+
+        width: 100%;
+        height: 500px;
+        overflow: auto;
+        overflow-x: auto;
+
+        background-color: white;
+
+
+
+    }
+
+    .cadreCouvreInfo{
+        width: 2000px;
+        height: 100%;
+
+    }
+
+    .cadreCouvre{
+
+        width: 100%;
+        height: auto;
+
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        background-color: white;
+
+    }
+
+    // LES WIDGET DE PAGE SERVER
+
+    .servcadre0{
+        width: 30%;
+        height: 400px;
+        margin-top:2%;
+        margin-left: 35%;
+
+    }
+
+    .servcadre00{
+        width: 100%;
+        height: 15%;
+
+    }
+
+    .servcadre1{
+        width: 80%;
+        height: 60%;
+
+        margin-left: 10%;
+        border-radius: 14px;
+
+        display:block;
+        background-color: white;
+
+    }
+
+    .servcadre2{
+        width: 80%;
+        height: 60%;
+
+        margin-left: 10%;
+
+        background-color: white;
+        border-radius: 14px;
+        display:none;
+
+    }
+
+    .servcadre3{
+        width: 100%;
+        height: 15%;
+
+    }
+    .servbt1{
+        --background:blue;
+        --color:white;
+        font-size:16px;
+        font-weight:bold;
+
+        margin-left:62%;
+        margin-top:4%;
+
+        display:none
+    }
+
+    .servbt2{
+        --background:red;
+        --color:white;
+        font-size:14px;
+        font-weight:bold;
+
+        margin-left:30%;
+        margin-top:4%;
+    }
+
+    .servdivAdr{
+
+        width: 94%;
+        height: 50px;
+        border-radius: 30px;
+        margin-top: 10%;
+        margin-left: 3%;
+
+        border:solid rgb(174, 174, 212) 1px;
+    }
+
+    // FIN WIDGET SERVER
+    //widget page connexion
+
+
+
+    .divConn{
+        width: 50%;
+        height: 520px;
+        margin-left: 25%;
+        margin-top: 1%;
+        border-radius:13px;
+        background-color: rgb(16, 2, 65);
+
+        display: none;
+    }
+
+    .cadreSousv{
+        width: 100%;
+        height: 93%;
+        margin-top: 0px;
+        border-radius:13px;
+        background:linear-gradient(to left,rgb(174, 174, 212),white ) ;
+
+    }
+
+    .condiv2{
+
+        width: 80%;
+        height: 60px;
+        margin-left: 10%;
+        margin-top: 4%;
+        background-color:white;// rgb(190, 182, 182);
+        border:1px solid rgb(158, 158, 201);
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+
+    .condiv2PH{
+
+        width: 90%;
+        height: 50px;
+        margin-left: 5%;
+        margin-top: 4%;
+        background-color:white;// rgb(190, 182, 182);
+        border:1px solid rgb(158, 158, 201);
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+
+    input{
+        outline: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 2%;
+        width: 80%;
+        background-color:white;
+        border-top:none;
+        border-bottom:none;
+        border-left:none;
+        border-right:none;
+        color:black
+    }
+    .conbtconnexion{
+        --background:red;
+        --color:white;
+        font-weight: bold;
+
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 5%;
+        border-radius:25%;
+
+    }
+
+    .condivSous1{
+
+        width: 20%;
+        height: 100%;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0
+
+    }
+
+    .condivSous2{
+
+        width: 80%;
+        height: 100%;
+        display: inline-block;
+
+    }
+
+    .contitre1{
+        color:black;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .contitre2{
+        color:black;
+        font-weight: italic;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .conlienCTI{
+        font-size: 15px;
+        color:white;
+        margin-left: 40%;
+    }
+    .conlabel{
+        font-weight: bold;
+
+    }
+    .contitre{
+        font-size: 18px;
+        font-weight: bold;
+        color:black;
+        margin-top: 1%;
+        text-align: center;
+    }
+
+    // FIN WIDGET
+
+    .pageJournal{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+
+        display:none;
+    }
+    .pageVente{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(211, 211, 214);
+        display: none;
+    }
+
+    .pageAccueilStynth{
+
+        width: 100%;
+        height: 100%;
+        background-color: rgb(174, 174, 212);
+        display: none;
+
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+
+    }
+    .pageMode{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+
+        display: none;
+
+    }
+    .pageSetting{
+        width: 60%;
+        height: auto;
+        margin-left:20%;
+        margin-top: 1%;
+        background-color: white;
+        border:solid white 2px;
+
+        display: none;
+    }
+
+    .pageAjout{
+        width: 80%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+        border-radius: 8px;
+
+        margin-left:10%;
+        margin-top: 1%;
+        background-color: white;
+        border:solid white 2px;
+
+        display: none;
+    }
+
+    .pageAMiseAJour{
+        width: 80%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+        border-radius: 8px;
+
+        margin-left:10%;
+        margin-top: 1%;
+        background-color: white;
+        border:solid white 2px;
+
+
+        display: none;
+    }
+    .pageRavitaillement{
+        width: 80%;
+        height: auto;
+        background-color: white;
+        border:solid white 2px;
+        border-radius: 8px;
+
+        margin-left:10%;
+        margin-top: 1%;
+        background-color: white;
+        border:solid white 2px;
+
+
+        display: none;
+    }
+
+    .pageSignaler{
+        width: 80%;
+        height: 880px;
+        background-color: white;
+        border:solid white 2px;
+        border-radius: 8px;
+
+        margin-left:10%;
+        margin-top: 1%;
+        background-color: white;
+        border:solid white 2px;
+
+        display: none;
+    }
+
+
+    .spanText{
+
+        color:black;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .msgBox{
+        width: 100%;
+        height: 300px;
+        background-color: rgb(26, 65, 238);
+        border-radius:5px;
+
+        box-shadow: 8px 10px 5px black;
+        display: none;
+
+        animation: ease-out 1s animationMid;
+    }
+    .divMidClient1{
+        width: 60%;
+        height: 25%;
+        background-color: white;
+        border-radius:5px;
+        margin-left: 20%;
+        margin-top: 3%;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        display: block;
+    }
+    .divMidClient2{
+        width: 60%;
+        height: 25%;
+        background-color: white;
+        border-radius:5px;
+        margin-left: 20%;
+        margin-top: 3%;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        display: none;
+    }
+    .divMidClient2A{
+        width: 60%;
+        height: 100%;
+        display: inline-block;
+    }
+    .divMidClient2A1{
+        width: 48%;
+        height: 100%;
+        display: inline-block;
+    }
+    .divMidClient2A2{
+        width: 48%;
+        height: 100%;
+        display: inline-block;
+    }
+    .divMidClient2B{
+        width: 35%;
+        height: 100%;
+        display: inline-block;
+    }
+    .textRechClientAbonn{
+        width: 90%;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .textSelectMedia{
+        width: 50%;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 10%;
+    }
+    .btnMid{
+        --background:red;
+        --color:white;
+        font-weight:bold;
+        margin-left: 22%;
+        margin-top: 0px;
+        width: 10%;
+
+        font-size: 14px;
+    }
+
+    .btnMidQuitter{
+        --background:white;
+        --color:black;
+        margin-top: 10px;
+        margin-left: 3%;
+        font-size: 14px;
+    }
+    .btnMidPriseCharge{
+        --background:white;
+        --color:black;
+        margin-top: 10px;
+        margin-left: 80%;
+    }
+
+    .btnMidPriseChargeImprio{
+        --background:white;
+        --color:black;
+        margin-top: 10px;
+        margin-left: 5%;
+    }
+
+
+    .menu0{
+        width: 25%;
+        height: 100%;
+        display: inline-block;
+        border:1px white solid;
+        top:0px;
+        position: relative;
+
+        background:linear-gradient(to left,rgb(174, 174, 212),rgb(16, 2, 65) )
+
+        //background-color:rgb(16, 2, 65);
+
+    }
+    .divContent{
+        width: 74%;
+        height: 100%;
+        display: inline-block;
+
+
+        overflow: auto;
+
+        position:fixed;
+        top:0;
+
+    }
+
+    .cadre{
+        width: 98%;
+        height: 400px;
+        overflow: auto;
+
+        margin-left:1%;
+        background:linear-gradient(to left, rgb(211, 211, 214),rgb(174, 174, 212));
+        border-radius:20px 20px 0px 0px
+    }
+
+    .cadreUltra{
+        width: 98%;
+        height: 100%;
+        overflow: auto;
+
+        margin-left:1%;
+        background:linear-gradient(to left, rgb(211, 211, 214),rgb(174, 174, 212));
+        border-radius:20px 20px 0px 0px
+    }
+    .divCadreBas{
+        width: 80%;
+        height: 400px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 8px;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+
+        display: inline-block;
+
+    }
+
+    .divQte{
+        width: 30%;
+        height: 80px;
+        margin-left:65%;
+        margin-top: 1%;
+        border-radius: 15px;
+        background-color: rgb(211, 211, 214);
+
+        border-radius:1px 11px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+    }
+    .textConte{
+        margin-left: 5%;
+        margin-top: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color:black;
+
+    }
+
+    .div1qte{
+        width: 60%;
+        height: 70%;
+        //margin-left:10%;
+        margin-top: 5%;
+        background-color:white;
+        display: inline-block;
+    }
+    .div2qte{
+
+        width: 30%;
+        height: 70%;
+        //margin-left:10%;
+        margin-top: 5%;
+        background-color:red;
+        display: inline-block;
+
+    }
+
+    .divSous1qte{
+
+        width: 40%;
+        height: 100%;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0
+
+    }
+
+
+    .divSous1qteService{
+
+        width: 40%;
+        height: 100%;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0;
+
+        overflow: auto;
+        overflow-y: auto;
+
+    }
+
+    .divSous2qte{
+
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+
+    }
+
+    .textqte{
+        margin-left: 10px;
+        font-size: 14px;
+        color:black;
+       //margin-top: 10px;
+    }
+    .labelQTE{
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight: bold;
+        color:white;
+    }
+
+    .divBasFin{
+
+        width: 15%;
+        height: auto;
+        margin-left: 2%;
+        background-color:rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top: 0px;
+
+    }
+    //.divfinVente1{
+
+    //}
+   // .divfinVente2{
+
+   // }
+
+    .cadreJournal{
+        width: 98%;
+        height: 400px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+
+    }
+    .cadreJournalBAs1{
+        width: 76%;
+        margin-left: 1%;
+        height: 70%;
+        display: inline-block;
+        background-color: white;
+    }
+
+    .cadreJournalBAs2{
+        width: 20%;
+        height: 50%;
+        margin-left: 1%;
+        display: inline-block;
+        background-color: white;
+        //align-items: center;
+    }
+    .cadreJournalBAs{
+        width: 60%;
+        margin-left: 20%;
+        height: 300px;
+        background-color: rgb(211, 211, 214);
+
+    }
+    .divRechJournfin{
+        width: 45%;
+        height:45px;
+        margin-left: 20%;
+        margin-top: 5px;
+        //border:1px black solid;
+        background-color: rgb(16, 2, 65);
+
+    }
+    .divRechJourn1{
+        width: 40%;
+        height:100%;
+        display: inline-block;
+    }
+    .divRechJourn2{
+        width: 60%;
+        height:100%;
+        display: inline-block;
+        //background-color: gray;
+    }
+
+
+    .divRechJourn1fin{
+        width: 40%;
+        height:100%;
+        display: inline-block;
+    }
+    .divRechJourn2fin{
+        width: 60%;
+        height:100%;
+        display: inline-block;
+       // background-color: white;
+    }
+
+    .cadreAjoutProduit{
+        width: 98%;
+        height: 650px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        margin-top: 2%;
+
+    }
+
+    .cadreIgnalerMotif{
+        width: 98%;
+        height: 750px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        margin-top: 2%;
+
+    }
+
+    .cadreAjoutProduitBAs{
+        width: 60%;
+        margin-left: 20%;
+        height: 100px;
+        background-color: rgb(211, 211, 214);
+    }
+    .cadreCouvrFilBack{
+
+        width: 100%;
+        height: 70%;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        margin-top: 5%;
+
+    }
+    .cadreHautAccueilSynth{
+
+        width: 450px;
+        height: 80%;
+        margin-left: 1%;
+        margin-top: 10%;
+
+        background-color: rgb(211, 211, 214);
+        border-radius: 8px;
+
+
+        margin-top: 10px;
+
+        display: inline-block;
+
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+
+    }
+
+    .cadreHautRapport{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10px;
+        height: 100px;
+        background-color: rgb(211, 211, 214);
+        border-radius: 8px;
+
+        padding-left: 3px;
+        padding-right: 3px;
+
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+
+    }
+
+    .cadreHautRapport1{
+        width: 47%;
+        height: 96%;
+        margin-left: 2%;
+        //background-color: rgb(11, 11, 163);
+
+        top:0;
+
+        display: inline-block;
+
+
+
+
+        //display: inline-block;
+    }
+
+    .cadreHautRapportAccuel{
+        width: 96%;
+        height: 92%;
+        margin-left: 2%;
+        margin-top: 4%;
+        //background-color: rgb(11, 11, 163);
+
+
+        display: inline-block;
+
+
+
+
+        //display: inline-block;
+    }
+
+    .cadreHautRapport2{
+
+        width: 42%;
+        height: 100%;
+        margin-left: 2%;
+        background-color: rgb(11, 11, 163);
+
+        margin-top: 0px;
+        top:0;
+
+
+        display: inline-block;
+
+    }
+
+
+
+    .divBas1{
+
+        width: 80%;
+        margin-left: 5%;
+        height: 250px;
+        border-radius: 15px 15px 1px 1px ;
+
+    }
+    .divBas2{
+
+        width: 48%;
+        height: 200px;
+        //display: inline-block;
+
+    }
+
+
+    .menu1{
+        width: 100%;
+        height: 5%;
+        display: block;
+
+        //background-color: rgb(16, 2, 65);
+        //border:1px white solid;
+
+    }
+
+    .menu2{
+        width: 20%;
+        height: 90%;
+        display: none;
+        position:absolute;
+        right:0px;
+        top:10px;
+        //transform: translateY(-50%);
+
+        //border:1px red solid;
+
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+
+    .menu3{
+        width: 100%;
+        height: 95%;
+        display: block;
+        background-color: rgb(165, 165, 218);
+        //border:1px red solid;
+    }
+
+    .divcadre{
+
+        width: 100%;
+        height: 55px;
+
+        margin-top: 2%;
+        background:linear-gradient(to left,rgb(174, 174, 212), rgb(199, 195, 195));
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+
+    }
+
+    .div1{
+
+        width: 40%;
+        height: 90%;
+        margin-left: 7%;
+        //margin-top: 5%;
+        background-color:white;
+        //border:2px solid black;
+        border-radius:1px 11px 1px 1px;
+        display: inline-block;
+        //display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+
+
+    }
+
+
+
+    .div2{
+
+        width: 40%;
+        height: 90%;
+        margin-left: 7%;
+        //margin-top: 5%;
+        background-color: white;
+        //border:2px solid black;
+        border-radius:1px 11px 1px 1px;
+        display: inline-block;
+        //display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+
+    }
+
+    .divbtn{
+
+        width: 90%;
+        height: 60px;
+        margin-left: 5%;
+        margin-top: 5%;
+        background-color: red;
+        //border:2px solid black;
+        border-radius:20px 20px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+
+
+    .divSous1{
+
+        width: 15%;
+        height: 100%;
+        background-color:rgb(16, 2, 65);
+        display: inline-block;
+
+        position: relative;
+        top:0
+
+    }
+
+    .divSous2{
+
+        width: 80%;
+        height: 100%;
+        display: inline-block;
+
+    }
+
+
+    .titre1{
+        color:black;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .titre1Menu{
+        color:white;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+
+        background-color: none;
+    }
+
+
+    .titre2coupon{
+        color:black;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .titre2{
+        color:black;
+        font-weight: italic;
+        font-size: 21px;
+        text-align: center;
+    }
+
+    a{
+        font-size: 17px;
+
+    }
+    p{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    li{
+        font-size:16px;
+        margin-top: 5px;
+    }
+
+    .lienCache{
+        text-decoration:none;
+    }
+
+    .btnMenu{
+        --background: white;
+
+        width: 100%;
+        height: 40px;
+        font-weight: bold;
+
+        font-size: 25px;
+
+    }
+
+    .btnMenuBas{
+        margin-top: 10%;
+        margin-left: 20%;
+
+        --background: red;
+        --color:white
+
+
+    }
+
+    .MenuHAut{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(16, 2, 65);
+
+        animation: transition 30s infinite;
+    }
+
+    .MenuHAutConne{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(16, 2, 65);
+
+        animation: transition 30s infinite;
+    }
+
+
+    ion-input{
+        color:black;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        width: 80%;
+        margin-left: 2%;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+
+    .MenuBAs{
+
+        width: 100%;
+        height: 200px;
+        //border: solid red 5px;
+
+        animation: transitionBas 40s infinite;
+    }
+
+    .logo{
+        width: 40%;
+        height: 80%;
+        border-radius:50%;
+        margin-left: 30%;
+        margin-top:5%;
+
+        box-shadow: 5px 5px 2px gray;
+
+    }
+
+
+    .icon{
+        color:blue;
+    }
+    .iconbas{
+        --color:white;
+        --background:blue;
+    }
+    .btsousText{
+        --background:black;
+        color:yellow;
+        font-weight: bold;
+    }
+
+    .divbtn{
+
+        width: 40%;
+        height: 60px;
+        margin-left: 30%;
+        margin-top: 5%;
+        background-color: red;
+        //border:2px solid black;
+        border-radius:20px 20px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: stretch;
+
+    }
+    .btsoumettreExpert{
+        width: 40%;
+        height: 40px;
+        margin-left: 30%;
+        margin-top: 2%;
+
+        --background:red;
+        font-size: 15px;
+        font-weight: bold;
+        color:white;
+
+    }
+    .btsoumettreVente{
+
+        width: 100%;
+        height: 40px;
+
+
+        --background:red;
+        font-size: 15px;
+        font-weight: bold;
+        color:white;
+    }
+    .btsoumettre{
+        --background:red;
+        font-size: 15px;
+        font-weight: bold;
+        color:white;
+    }
+
+    ion-item{
+        --background: rgb(16, 2, 65);
+        --color:white
+    }
+    .btdepliant{
+        background-color:rgb(16, 2, 65);
+        color:red;
+
+    }
+
+    .menudepliant{
+        --background: black;
+        --color:white
+    }
+
+    .iconbas{
+        --color:white;
+        --background:blue;
+    }
+
+    ion-item{
+        --background: rgb(16, 2, 65);
+        --color:white
+    }
+    .btdepliant{
+        background-color:rgb(16, 2, 65);
+        color:red;
+
+    }
+
+    .menudepliant{
+        --background: rgb(16, 2, 65);
+        --color:white
+    }
+    .divRecherche{
+
+        width: 30%;
+        height:45px;
+        margin-left: 60%;
+        margin-top: 10px;
+        border-radius: 20px;
+       // border:1px black solid;
+        background-color: white;
+        display: inline-block;
+
+    }
+    .divRechercheAjout{
+        width: 30%;
+        height:45px;
+        margin-left: 60%;
+        margin-top: 10px;
+        border-radius: 20px;
+        border:1px black solid;
+        background-color: white;
+        display: inline-block;
+    }
+    .divRech1{
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+
+
+    }
+    .divRech2{
+        width: 40%;
+        height: 100%;
+        display: inline-block;
+
+
+    }
+    .btnAjouter{
+        --background:red;
+        --color:white;
+        margin-left: 60%;
+    }
+
+    .divCotRech{
+        width: 5%;
+        height:45px;
+        margin-left: 2px;
+        margin-top: 5px;
+        //border:1px black solid;
+        background-color: rgb(16, 2, 65);
+        display: inline-block;
+    }
+    input{
+        width: 90%;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        background-color: white;
+        color:black;
+
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        font-size: 16px;
+        font-weight: bold;
+
+        outline: none;
+
+        margin-top: 5px;
+    }
+    .btnModele{
+        --background:rgb(16, 2, 65);
+        width: 80%;
+        height: 80%;
+    }
+    .textautre{
+        color:white;
+        font-weight: bold;
+    }
+    .header{
+        color:white;
+        font-weight: bold;
+        background-color: rgb(16, 2, 65);
+        font-size: 18px;
+        font-size: bold;
+        //width: 300px;
+    }
+
+
+
+    .contenuTable{
+        color:black;
+        background-color: rgb(131, 145, 182);
+        font-size: 16px;
+        margin-top: 10px;
+
+    }
+    .contenuTablenom{
+        color:white;
+        background-color: rgb(16, 2, 65);
+        font-size: 15px;
+
+    }
+
+    ion-grid{
+        width: 1000px;
+    }
+    .divRechJourn{
+        width: 98%;
+        height:35px;
+        margin-left: 1%;
+        margin-top: 5px;
+        //border:1px black solid;
+        background-color: rgb(16, 2, 65);
+
+    }
+
+
+    .textJourna{
+        font-weight: bold;
+        margin-left: 5px;
+        color:white;
+        font-size: 13px;
+    }
+    .textJournaDetail{
+        font-weight: bold;
+        margin-left: 5px;
+        color:red;
+        //font-size: 14px;
+
+    }
+    .textJournStartOff{
+        height: 27px;
+        font-size: 13px;
+    }
+    ion-select{
+        color:red;
+    }
+    .btnJournal{
+        margin-top: 12%;
+        margin-left: 15%;
+
+        --background: red;
+        --color:white
+
+
+    }
+
+
+    .btnPreforma{
+        margin-top: 12%;
+        margin-left: 10%;
+
+        --background: red;
+        --color:white
+
+    }
+
+    .btnPreformaShow{
+
+        margin-left: 10%;
+
+        --background: red;
+        --color:white
+
+    }
+
+    .btnNetPAyer{
+        margin-top: 2%;
+        margin-left: 30%;
+        height: 35px;
+
+        --background: red;
+        --color:white
+    }
+    .textNetPayer{
+
+        font-size: 17px;
+        font-weight: bold;
+        color:white;
+    }
+
+    .textgras{
+        font-weight: bold;
+        color:black;
+        margin-left: 1%;
+    }
+
+    .cadreMode1{
+
+        width: 98%;
+        height: 200px;
+        background-color: rgb(199, 195, 195);
+        //border:1px black solid;
+        //overflow: auto;
+        border-radius:11px 11px 0px 0px;
+        margin-left: 1%;
+    }
+
+    .cadreMode2{
+
+        width: 98%;
+        height: 300px;
+        background-color: rgb(199, 195, 195);
+        border-radius:0px 0px 11px 11px;
+        overflow: auto;
+        margin-left: 1%;
+
+    }
+
+
+    .cadreModelSetting{
+
+        width: 98%;
+        height: 300px;
+        //background-color: rgb(199, 195, 195);
+
+        background:linear-gradient(to left,rgb(174, 174, 212), rgb(199, 195, 195));
+        //border:1px black solid;
+        //overflow: auto;
+        border-radius:11px 11px 0px 0px;
+        margin-left: 1%;
+
+    }
+    .cadreSetting{
+        width: 30%;
+        height:80px;
+        margin-left: 2%;
+        margin-top: 4%;
+        //border:1px solid blue;
+        display: inline-block;
+
+        align-content: center;
+
+    }
+    .descriptionSetting{
+        font-size: 14px;
+    }
+    .lienCache{
+        text-decoration:none;
+    }
+
+    .btnMenu{
+        --background: white;
+
+        width: 250px;
+        font-weight: bold;
+
+
+    }
+    .btnMenuBas{
+        margin-top: 30%;
+        margin-left: 10%;
+
+        --background: red;
+        --color:white
+
+
+    }
+
+    .btnsetting{
+        margin-top: 10%;
+        margin-left: 25%;
+
+        --background: red;
+        --color:white
+
+    }
+    .btnsettingBas{
+
+        margin-top: 10%;
+        margin-left: 25%;
+
+        --background: rgb(16, 2, 65);
+        --color:white
+    }
+
+    .iconRapbas{
+
+        margin-top: 10%;
+        margin-left: 25%;
+        color:white
+    }
+    .descriptionSetting{
+        margin-left: 20%;
+        margin-top: 10px;
+        color:black;
+    }
+    .comboSettingProd{
+        margin-left: 15%;
+    }
+    .lienCTI{
+        font-size: 13px;
+        color:black;
+        margin-left: 40%;
+    }
+
+    .diVVtitre{
+        width: 100%;
+        height: 50px;
+
+    }
+    .diVVtitre1{
+        width: 17%;
+        height: 100%;
+        display: inline-block;
+
+    }
+    .diVVtitre2{
+        width: 82%;
+        height: 100%;
+        display: inline-block;
+    }
+
+    .btnRetSeeting{
+        margin-top: 0%;
+        margin-left: 5%;
+
+        --background: red;
+        --color:white
+
+
+    }
+
+    .divDate{
+        width: 90%;
+        height: 90%;
+        margin-top: 2px;
+        margin-left: 5%;
+        background-color: rgb(248, 248, 253);
+        border-radius: 6px;
+    }
+    .divDate1{
+        width: 25%;
+        height: 90%;
+
+        margin-left: 5%;
+        margin-top: 3px;
+        background-color: rgb(211, 211, 214);
+        display: none;
+        border-radius: 6px;
+
+        display: inline-block;
+    }
+    .cadreMiseJour{
+        width: 98%;
+        height: 400px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+
+    }
+    .btPC{
+        width: 40%;
+        height: 40px;
+        margin-left: 30%;
+
+
+        --background:red;
+        font-size: 15px;
+        font-weight: bold;
+        color:white;
+    }
+    .cadreRavSetting{
+        width: 98%;
+        height: 300px;
+        overflow: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+       // display: flex;
+        margin-left:1%;
+        background-color: white;
+    }
+    .produitMotif{
+        width: 60%;
+        height: 60px;
+        margin-left:20%;
+        margin-top:15px;
+        border-radius:8px;
+
+        border:1px gray solid;
+    }
+    .produitMotif1{
+        width: 48%;
+        height: 100%;
+
+        display: inline-block;
+    }
+    .montantMotif{
+        width: 60%;
+        height: 60px;
+        margin-left:20%;
+        margin-top:15px;
+        border-radius:8px;
+
+        border:1px gray solid;
+    }
+
+    .detailMotif{
+        width: 60%;
+        height: 120px;
+        margin-left:20%;
+        margin-top:15px;
+        border-radius:8px;
+
+        border:1px gray solid;
+    }
+
+    .titreMenu{
+        font-size: 14px;
+    }
+
+    .cadranPbas{
+
+        width: 60%;
+        height: 60px;
+        margin-left:20%;
+        box-shadow: 8px;
+
+        background-color: rgb(211, 211, 214) ;
+
+    }
+
+    .cadranPbas1{
+
+        width: 48%;
+        height: 100%;
+
+        display: inline-block;
+
+    }
+
+
+
+
+}
+
+.icon{
+    //color:red;
+    --color:rgb(16, 2, 65);
+}
+.btnMenue{
+    --background:red;
+
+}
+
+span{
+    color:white;
+}
+.pageServer{
+    width:100%;
+    height:100%;
+
+}
+
+.divProSous{
+    background:linear-gradient(to left,rgb(174, 174, 212), rgb(199, 195, 195));
+    border-radius: 8px;
+}
+
+.btnImprimexx{
+    display: block;
+}
+.pageImpression{
+    display: none;
+}
+
+.btnImprimexx{
+    display:none;
+}
+
+.cadreIconD{
+
+    width: 14%;
+    height: 80%;
+
+    border: solid 1px gray;
+    border-radius: 8px;
+
+    display: inline-block;
+
+    padding-left: 8px;
+    padding-top: 2px;
+
+}
+
+.cadreContD{
+
+    width: 30%;
+    height: 100%;
+    color:black;
+    font-weight: bold;
+
+    padding-left: 5px;
+
+    display: inline-block;
+
+}
+.iconRapBas{
+
+    color:rgb(16, 2, 65)
+
+}
+
+.grouperAllVide{
+    border-radius: 11px;
+    border: 2px rgb(201, 201, 226) solid;
+    color:rgb(16, 2, 65)
+
+}
+
+.cadreHH1{
+
+    width: 100%;
+    height: 80%;
+
+}
+
+.cadreHH2{
+
+    width: 100%;
+    height: 18%;
+
+}
+
+.btnAffichX{
+
+    width: 80%;
+    height: 90%;
+    margin-left:10% ;
+    margin-top:5% ;
+
+    background-color: red;
+    color:white;
+    border-radius: 18px;
+    padding-left: 10px;
+
+}
+.textpanSec{
+    color: black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+}
+
+.textReduction{
+
+    color: black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 18px;
+
+
+    text-align:center
+
+}
+
+
+
+.divRed{
+
+    width: 80%;
+    height: 30px;
+    margin-left:10% ;
+
+
+
+}
+
+
+.divRed1{
+
+    width: 40%;
+    height: 100%;
+    margin-left:3% ;
+    display: inline-block;
+
+}
+
+.divSous1qteHH{
+
+    width: 100%;
+    height: 40%;
+
+}
+
+.divSous1qteBB{
+
+    width: 100%;
+    height: 40%;
+
+}
+
+.cadreBtnImpreService{
+
+  width: 20%;
+  height: auto;
+
+  margin-left: 30%;
+
+
+}
+
+
+
+// background:linear-gradient(to left,rgb(174, 174, 212), rgb(199, 195, 195));
+
+
